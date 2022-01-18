@@ -1,0 +1,112 @@
+---
+import AdauresLogo from "assets:AdauresLogo";
+
+const sections = [
+  {
+    title: "Links",
+    items: [
+      { type: "link", link: "mailto:hello@castopod.org", label: "Contact us" },
+      {
+        type: "link",
+        link: "https://code.podlibre.org/podlibre/castopod-host/issues",
+        label: "Issues",
+      },
+      {
+        type: "link",
+        link: "https://code.podlibre.org/podlibre/castopod-host",
+        label: "Source code",
+      },
+      {
+        type: "link",
+        link: "https://github.com/ad-aures/castopod-host",
+        label: "Github [mirror]",
+      },
+      { type: "link", link: "https://podlibre.org/", label: "Blog" },
+    ],
+  },
+  {
+    title: "Community",
+    items: [
+      {
+        type: "link",
+        link: "https://podlibre.social/@castopod",
+        label: "Mastodon",
+      },
+      { type: "link", link: "https://twitter.com/castopod", label: "Twitter" },
+      { type: "link", link: "https://castopod.org/discord", label: "Discord" },
+      {
+        type: "link",
+        link: "https://opencollective.com/castopod",
+        label: "Open collective",
+      },
+    ],
+  },
+  {
+    title: "About Ad Aures",
+    items: [
+      { type: "link", link: "https://adaures.com", label: "Website" },
+      { type: "link", link: "https://twitter.com/ad_aures", label: "Twitter" },
+      {
+        type: "link",
+        link: "https://linkedin.com/company/ad-aures",
+        label: "LinkedIn",
+      },
+    ],
+  },
+  {
+    title: "Legal",
+    items: [
+      {
+        type: "link",
+        link: "https://castopod.org/privacy",
+        label: "Privacy policy",
+      },
+      {
+        type: "link",
+        link: "https://castopod.org/privacy#legal-notice",
+        label: "Legal notice",
+      },
+      {
+        type: "notice",
+        label: "🍪 This website does not have any cookies!",
+      },
+    ],
+  },
+];
+---
+
+<footer class="flex justify-between py-12 text-white bg-pine-800">
+  <div class="container flex flex-col justify-center gap-8 lg:flex-row-reverse">
+    <div
+      class="grid w-full max-w-3xl grid-cols-1 gap-6 px-4 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-4"
+    >
+      {sections.map((section) => (
+        <section class="flex flex-col gap-y-2">
+          <h1 class="text-sm font-bold tracking-wider uppercase font-display">
+            {section.title}
+          </h1>
+          <nav class="flex flex-col gap-y-2">
+            {section.items.map((item) =>
+              item.type === "link" ? (
+                <a
+                  class="decoration-pine-500 decoration-2 hover:underline"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <small>{item.label}</small>
+              )
+            )}
+          </nav>
+        </section>
+      ))}
+    </div>
+    <div class="flex flex-col items-start self-center max-w-sm mx-auto lg:mx-0">
+      <AdauresLogo className="h-8" />
+      <small>Copyright © 2022 Ad Aures. All rights reserved.</small>
+    </div>
+  </div>
+</footer>

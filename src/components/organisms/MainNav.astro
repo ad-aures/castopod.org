@@ -1,0 +1,93 @@
+---
+import CastopodLogo from "assets:CastopodLogo";
+import { Icon } from "astro-icon";
+
+import XElement from "astro-xelement";
+
+const { button: Button } = XElement;
+
+const toggleMobileMenu = () => {
+  const menu = document.querySelector("nav[id=mobile-navigation]");
+
+  if (menu.classList.contains("hidden")) {
+    document.querySelector("svg[id='menu-open']").classList.add("hidden");
+    document.querySelector("svg[id='menu-close']").classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+    menu.classList.remove("hidden");
+  } else {
+    document.querySelector("svg[id=menu-open]").classList.remove("hidden");
+    document.querySelector("svg[id=menu-close]").classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+    menu.classList.add("hidden");
+  }
+};
+---
+
+<nav class="px-4 bg-pine-800 md:px-0">
+  <div class="container flex justify-between h-20">
+    <div class="inline-flex items-center gap-x-6">
+      <a href="#" class="relative -bottom-2"
+        ><CastopodLogo className="h-10" /></a
+      >
+      <a
+        href="https://podlibre.org/"
+        class="hidden font-semibold md:block hover:underline decoration-pine-500 decoration-2"
+        >Blog</a
+      >
+    </div>
+    <div class="inline-flex items-center md:gap-x-4">
+      <a
+        href="https://code.podlibre.org/podlibre/castopod-host"
+        class="hidden md:block"
+        ><Icon pack="ri" name="gitlab-fill" class="h-6" /></a
+      >
+      <a href="https://podlibre.social/@castopod" class="hidden md:block"
+        ><Icon pack="ri" name="mastodon-fill" class="h-6" /></a
+      >
+      <a href="https://twitter.com/castopod" class="hidden md:block"
+        ><Icon pack="ri" name="twitter-fill" class="h-6" /></a
+      >
+      <button
+        class="inline-flex items-center px-4 py-2 font-semibold text-white border-2 rounded-full border-pine-100 gap-x-2 bg-pine-800 hover:bg-pine-900 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
+      >
+        Download
+      </button>
+      <Button @click={toggleMobileMenu} class="p-2 md:hidden"
+        ><Icon id="menu-open" pack="ri" name="menu-2-fill" class="h-6" /><Icon
+          id="menu-close"
+          pack="ri"
+          name="close-fill"
+          class="hidden h-6"
+        /></Button
+      >
+      <nav
+        id="mobile-navigation"
+        class="fixed left-0 z-50 flex flex-col hidden w-screen h-screen px-8 py-12 text-xl bg-white gap-y-2 top-20 text-pine-900"
+      >
+        <a
+          href="https://podlibre.org/"
+          class="mb-6 font-semibold md:block hover:underline decoration-pine-500 decoration-2"
+          >Blog</a
+        >
+        <a
+          href="https://code.podlibre.org/podlibre/castopod-host"
+          class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
+          ><Icon pack="ri" name="gitlab-fill" class="h-6 text-pine-500" />Source
+          code</a
+        >
+        <a
+          href="https://podlibre.social/@castopod"
+          class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
+          ><Icon pack="ri" name="mastodon-fill" class="h-6 text-pine-500"
+          />Mastodon</a
+        >
+        <a
+          href="https://twitter.com/castopod"
+          class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
+          ><Icon pack="ri" name="twitter-fill" class="h-6 text-pine-500"
+          />Twitter</a
+        >
+      </nav>
+    </div>
+  </div>
+</nav>

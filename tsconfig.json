@@ -3,7 +3,12 @@
     "moduleResolution": "node",
     "baseUrl": "src" /* Base directory to resolve non-absolute module names. */,
     "paths": {
-      "components:*": ["components/*.astro"]
+      "atoms:*": ["components/atoms/*.astro"],
+      "molecules:*": ["components/molecules/*.astro"],
+      "organisms:*": ["components/organisms/*.astro"],
+      "assets:*": ["assets/*.astro"]
     }
-  }
+  },
+  "include": ["src/**/*.astro"],
+  "exclude": []
 }

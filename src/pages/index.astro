@@ -1,24 +1,43 @@
 ---
 // Component Imports
-import Button from "components:Button";
+import Features from "organisms:Features";
+import Footer from "organisms:Footer";
+import Sponsors from "organisms:Sponsors";
+import Community from "organisms:Community";
+import OpenSource from "organisms:OpenSource";
+import Header from "organisms:Header";
+import BrowserPreview from "organisms:BrowserPreview";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>Castopod by Ad Aures</title>
+    <title>Castopod by Ad Aures | Self-host your podcasts for free</title>
+    <meta
+      name="description"
+      content="Castopod is an open-source hosting platform made for podcasters who want engage and interact with their audience. "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       type="text/css"
-      href={Astro.resolve("../styles/global.css")}
+      href={Astro.resolve("../styles/index.css")}
     />
   </head>
 
-  <body>
-    <Button>I’m a Tailwind Button!</Button>
+  <body class="overflow-x-hidden">
+    <Header />
+    <main>
+      <BrowserPreview />
+      <Features />
+      <OpenSource />
+      <Community />
+      <Sponsors />
+    </main>
+    <Footer />
   </body>
 </html>

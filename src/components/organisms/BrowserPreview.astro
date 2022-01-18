@@ -1,0 +1,68 @@
+---
+import CastopodActivityScreen from "assets:CastopodActivityScreen";
+import CastopodAdminScreen from "assets:CastopodAdminScreen";
+import XElement from "astro-xelement";
+
+const { button: Button } = XElement;
+const activeClass = " bg-gray-200 font-semibold";
+const inactiveClass = " hover:bg-gray-200";
+
+function setActive(event: MouseEvent) {
+  const button = event.target as HTMLButtonElement;
+
+  const target = button.dataset.target;
+
+  const illustration = document.querySelector(
+    `svg[id=${target}]`
+  ) as SVGElement;
+
+  button.classList.add("bg-gray-200", "font-semibold");
+  button.classList.remove("hover:bg-gray-200");
+  illustration.classList.remove("hidden");
+
+  if (target === "website") {
+    const adminIllustration = document.querySelector("svg[id=admin]");
+    const adminButton = document.querySelector("button[data-target=admin]");
+    adminButton.classList.remove("bg-gray-200", "font-semibold");
+    adminButton.classList.add("hover:bg-gray-200");
+    adminIllustration.classList.add("hidden");
+  } else {
+    const websiteIllustration = document.querySelector("svg[id=website]");
+    const websiteButton = document.querySelector("button[data-target=website]");
+    websiteButton.classList.remove("bg-gray-200", "font-semibold");
+    websiteButton.classList.add("hover:bg-gray-200");
+    websiteIllustration.classList.add("hidden");
+  }
+}
+---
+
+<div
+  id="browser-preview"
+  class="relative w-full max-w-6xl mx-auto -mt-40 overflow-hidden border-4 border-gray-300 shadow-2xl rounded-xl"
+>
+  <nav class="flex items-center h-5 px-4 bg-gray-300 gap-x-4">
+    <div class="inline-flex gap-x-1">
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+    </div>
+    <div class="flex gap-x-1">
+      <Button
+        @click={setActive}
+        data-target="website"
+        class={"px-4 text-sm rounded-t" + activeClass}
+      >
+        website
+      </Button>
+      <Button
+        @click={setActive}
+        data-target="admin"
+        class={"px-4 text-sm rounded-t" + inactiveClass}>admin</Button
+      >
+    </div>
+  </nav>
+
+  <CastopodActivityScreen id="website" />
+
+  <CastopodAdminScreen id="admin" className="hidden" />
+</div>

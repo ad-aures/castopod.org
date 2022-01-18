@@ -8,5 +8,10 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
   renderers: [],
 });
