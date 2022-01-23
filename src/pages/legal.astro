@@ -1,0 +1,195 @@
+---
+import Footer from "organisms:Footer";
+import { Icon } from "astro-icon";
+import CastopodLogo from "assets:CastopodLogo";
+
+import { SEO } from "astro-seo";
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <SEO
+      title="Castopod by Ad Aures | Legal Notice"
+      description="Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content."
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={Astro.resolve("../styles/index.css")}
+    />
+    <script
+      defer
+      data-domain="castopod.org"
+      src="https://analytics.castopod.org/js/plausible.js"></script>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <header class="py-12 bg-pine-800">
+      <div class="container flex flex-col items-start px-4">
+        <a href="/" class="inline-flex gap-x-2" title="Back to home">
+          <Icon pack="ri" name="arrow-left-line" class="h-6 text-pine-100" />
+          <CastopodLogo className="h-8" />
+        </a>
+        <h1
+          class="relative z-10 inline text-4xl font-bold font-display after:bg-pine-900 after:-z-10 text-pine-100 after:w-full after:h-1/2 after:absolute after:left-0 after:-bottom-1 after:rounded-full"
+        >
+          Legal Notice
+          <i class="pi pi-legal"></i>
+        </h1>
+      </div>
+    </header>
+    <main class="container">
+      <div class="px-4 py-12 prose">
+        <h2>Publisher</h2>
+        <p>
+          This website was designed by
+          <a href="https://adaures.com/">Ad Aures</a>
+          , a company registered in Paris, France, 58 rue Tiquetonne, under the RCS
+          number 880658745.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          <a
+            href="mailto:hello@castopod.org"
+            data-analytics="&quot;E-mail&quot;"
+          >
+            hello@castopod.org
+          </a>
+        </p>
+        <h2>Publication director</h2>
+        <p>Benjamin Bellamy.</p>
+
+        <h2>Hosting company</h2>
+        <p>
+          OVH SAS, 2 rue Kellermann - 59100 Roubaix - France.
+          <br />
+          Phone: +33 8 99 70 17 61
+          <br />
+          Fax: +33 3 20 20 09 58
+          <br />
+          E-mail:
+          <a href="mailto:support@ovh.com">support@ovh.com</a>
+          <br />
+          Website:
+          <a href="https://www.ovh.com/" target="_blank" rel="nofollow noopener"
+            >https://www.ovh.com/</a
+          >
+        </p>
+
+        <h2>Privacy Policy</h2>
+        <p>
+          Your personal data are protected by French laws
+          <a
+            href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000886460"
+            target="_blank"
+            rel="nofollow noopener">#78-17 (6 January 1978)</a
+          >
+          ,
+          <a
+            href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000441676"
+            target="_blank"
+            rel="nofollow noopener">#2004-801 (6 August 2004)</a
+          >
+          , and the
+          <a
+            href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A31995L0046"
+            target="_blank"
+            rel="nofollow noopener"
+            >Directive 95/46/EC of the European Parliament and of the Council of
+            24 October 1995</a
+          >
+          .
+          <br />
+          For any question regarding personal data collected, please contact Ad Aures
+          (see contact above).
+        </p>
+
+        <h2>Cookies</h2>
+        <p>This website does not have any cookies.</p>
+
+        <h2>Copyrights</h2>
+        <p>
+          All product names, logos, brands, trademarks and registered trademarks
+          are property of their respective owners. All company, product and
+          service names used in this website are for identification purposes
+          only. Use of these names, trademarks and brands does not imply
+          endorsement.
+        </p>
+        <p>
+          If you are the owner of a name, logo, brand or trademark present on
+          this website and if you want it corrected or removed, please send an
+          e-mail to
+          <a
+            href="mailto:hello@castopod.org"
+            data-analytics="&quot;Contact&quot;,{&quot;props&quot;:{&quot;Via&quot;:&quot;E-mail&quot;}}"
+          >
+            hello@castopod.org
+          </a>
+        </p>
+
+        <h2>Licenses</h2>
+        <p>
+          Castopod's source code is licensed under
+          <a
+            href="https://www.gnu.org/licenses/agpl-3.0.html"
+            target="_blank"
+            rel="nofollow noopener">AGPL v3</a
+          >.
+        </p>
+        <p>
+          Some illustrations use icons from
+          <a href="https://3dicons.co/" target="_blank" rel="nofollow noopener"
+            >3Dicons</a
+          >
+          and are licensed under
+          <a
+            class="inline-flex items-center gap-x-1"
+            href="https://creativecommons.org/publicdomain/zero/1.0/"
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            (CC0)
+            <Icon pack="ri" name="creative-commons-zero-fill" class="h-4" />
+          </a>.
+        </p>
+        <h2>Limitation of liability</h2>
+        <p>
+          This site contains information made available by external communities
+          or companies or hypertext links to other sites that were not developed
+          by Ad Aures SAS. Content made available on the site is provided for
+          information purposes only. The existence of a link of this site to
+          another site does not constitute a validation of that site, or of its
+          content. It is up to the Internet user to use these information with
+          discernment and critical thinking. The responsibility of Ad Aures SAS
+          could not be committed because of the information, opinions and
+          recommendations made by third parties.
+        </p>
+        <p>
+          Ad Aures SAS cannot be held liable for direct or consequential damages
+          caused to the user’s material, when accessing the site, and resulting
+          either from the use of equipment that does not meet the technical
+          specifications required, either from the appearance of a bug or of
+          incompatibility.
+        </p>
+        <p>
+          Ad Aures SAS cannot also be held responsible for indirect damages
+          (such as a loss of market or a loss of a chance) resulting from the
+          use of the site.
+        </p>
+
+        <h2>Contractual limitations on technical data</h2>
+        <p>
+          Ad Aures SAS cannot be held responsible for material damages linked to
+          the use of the site. In addition, the user of the site undertakes to
+          access the site using recent material, not containing viruses and with
+          an up-to-date browser.
+        </p>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
