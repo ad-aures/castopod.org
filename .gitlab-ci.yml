@@ -1,0 +1,61 @@
+image: node:16
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+# This job only serves for validating that the app builds correctly on all non deployment branches
+build:
+  stage: build
+  script:
+    - npm run build
+  except:
+    - main
+
+build:
+  stage: build
+  environment:
+    name: production
+    url: https://castopod.org/
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: https://castopod.org/
+  variables:
+    HOST: $HOST
+    USER: $USER
+    TEMP_DIRECTORY: $TEMP_DIRECTORY
+    DIRECTORY: $DIRECTORY
+    SSH_PORT: 3242
+  before_script:
+    # install rsync for file transfers
+    - apt-get update && apt-get install rsync -y
+    # ssh config
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    # Run ssh-agent (inside the build environment)
+    - eval $(ssh-agent -s)
+    # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+    - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 --decode)
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - rsync -avzuh -e "ssh -p $SSH_PORT" dist/ $USER@$HOST:$TEMP_DIRECTORY --progress
+    - ssh $USER@$HOST -p $SSH_PORT "rsync -rtv $TEMP_DIRECTORY $DIRECTORY"
+  only:
+    - main
