@@ -8,6 +8,10 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
+  buildOptions: {
+    sitemap: true,
+    site: "https://castopod.org/",
+  },
   vite: {
     ssr: {
       external: ["svgo"],
