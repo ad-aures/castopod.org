@@ -50,8 +50,7 @@ import { Icon } from "astro-icon";
         <p class="mt-2">
           Interact with your audience in the fediverse, a decentralized social
           network. Your podcast becomes a social network: your episodes can be
-          shared, liked and commented on without depending on any big
-          corporation.
+          shared, liked and commented on without depending on <em>anyone</em>.
         </p>
       </div>
       <StraightPath
@@ -111,7 +110,7 @@ import { Icon } from "astro-icon";
         <p class="mt-2">
           Manage your podcast in one place, broadcast it everywhere using RSS.
           Castopod allows you to have your podcast show up on Apple Podcasts,
-          Spotify, Deezer, Podcast Addict, …
+          Spotify, Deezer, Podcast Addict, Podfriend, …
         </p>
       </div>
       <StraightPath
@@ -171,7 +170,13 @@ import { Icon } from "astro-icon";
         <p class="mt-2">
           Publish your podcast for free or monetize it. Get tips, connect to the
           crypto currency network with value4value, or automatically embed
-          listen‑to‑click ads (using Ad Aures’ contextual solution for example).
+          listen‑to‑click ads (using
+          <a
+            href="https://adaures.com/#listen-to-click"
+            class="underline hover:no-underline decoration-pine-500 decoration-2"
+            >Ad Aures’ contextual solution</a
+          >
+          for example).
         </p>
       </div>
       <StraightPath
@@ -180,19 +185,26 @@ import { Icon } from "astro-icon";
     </article>
   </div>
 
-  <article class="relative max-w-2xl px-12 mx-auto mt-64 text-center">
+  <article class="relative max-w-3xl px-12 mx-auto mt-64 text-center">
     <Path6 className="hidden lg:block absolute h-24 -top-1/2 left-1/3" />
 
     <h2 class="text-4xl font-bold font-display text-pine-800">
       Join the Podcasting 2.0 movement!
     </h2>
-    <Podcasting20Badge className="h-6 mx-auto mt-4" />
-    <p class="max-w-xl mx-auto mt-4 text-xl">
-      Unlock features never seen before and available on many platforms thanks
-      to the
+    <a href="https://podcastindex.org/">
+      <Podcasting20Badge className="h-5 mx-auto my-8" />
+    </a>
+    <p class="max-w-xl mx-auto text-xl">
+      Unlock features never seen before and available on
+      <a
+        href="https://podcastindex.org/apps"
+        class="underline decoration-pine-500 decoration-2 hover:no-underline"
+        >many platforms</a
+      >
+      thanks to the
       <a
         href="https://podcastindex.org/"
-        class="underline decoration-pine-500 decoration-4 hover:no-underline"
+        class="underline decoration-pine-500 decoration-2 hover:no-underline"
         >Podcast Index</a
       >
       community.
@@ -202,7 +214,8 @@ import { Icon } from "astro-icon";
       <strong>persons</strong>, <strong>transcripts</strong>,
       <strong>chapters</strong>, and much more!
     </p>
-    <button
+    <a
+      href="https://code.podlibre.org/podlibre/castopod-host/-/releases"
       class="inline-flex items-center px-4 py-2 mt-6 font-semibold text-white rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
     >
       <Icon
@@ -210,6 +223,6 @@ import { Icon } from "astro-icon";
         name="download-cloud-2-fill"
         class="h-6 text-pine-800 group-hover:text-pine-500"
       />Download Castopod
-    </button>
+    </a>
   </article>
 </section>
