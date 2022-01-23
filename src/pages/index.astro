@@ -7,6 +7,7 @@ import Community from "organisms:Community";
 import OpenSource from "organisms:OpenSource";
 import Header from "organisms:Header";
 import BrowserPreview from "organisms:BrowserPreview";
+import { SEO } from "astro-seo";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -17,10 +18,46 @@ import BrowserPreview from "organisms:BrowserPreview";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>Castopod by Ad Aures | Your Free & Open-source Podcast Host</title>
-    <meta
-      name="description"
-      content="Castopod is an open-source hosting platform made for podcasters who want engage and interact with their audience."
+    <SEO
+      title="Castopod by Ad Aures | Your Free & Open-source Podcast Host"
+      description="Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content."
+      canonical="https://castopod.org/"
+      openGraph={{
+        basic: {
+          title: "Castopod | Your Free & Open-source Podcast Host",
+          description:
+            "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
+          type: "website",
+          image: "https://castopod.org/assets/images/open-graph.jpg",
+          url: "https://castopod.org/",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@castopod",
+        creator: "@ad_aures",
+      }}
+      extend={{
+        meta: [
+          {
+            name: "og:image:type",
+            content: "image/jpeg",
+          },
+          {
+            name: "og:image:width",
+            content: 1200,
+          },
+          {
+            name: "og:image:height",
+            content: 630,
+          },
+          {
+            name: "og:image:alt",
+            content:
+              "Castopod mascot waving hello and hoding a browser showcasing Castopod.",
+          },
+        ],
+      }}
     />
     <link
       rel="stylesheet"

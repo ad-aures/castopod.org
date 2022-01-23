@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
-    "astro-icon": "^0.5.3"
+    "astro-icon": "^0.5.3",
+    "astro-seo": "^0.4.2"
   }
 }
