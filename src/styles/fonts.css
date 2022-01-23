@@ -23,6 +23,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(""), url("../assets/fonts/rubik-700.woff2") format("woff2"),
     url("../assets/fonts/rubik-700.woff") format("woff");
 }
