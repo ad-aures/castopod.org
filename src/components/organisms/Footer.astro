@@ -81,9 +81,9 @@ const sections = [
     >
       {sections.map((section) => (
         <section class="flex flex-col gap-y-2">
-          <h1 class="text-sm font-bold tracking-wider uppercase font-display">
+          <p class="text-sm font-bold tracking-wider uppercase font-display">
             {section.title}
-          </h1>
+          </p>
           <nav class="flex flex-col gap-y-2">
             {section.items.map((item) =>
               item.type === "link" ? (
