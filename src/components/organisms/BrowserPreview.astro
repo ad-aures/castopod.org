@@ -1,6 +1,6 @@
 ---
-import CastopodActivityScreen from "assets:CastopodActivityScreen";
-import CastopodAdminScreen from "assets:CastopodAdminScreen";
+import CastopodActivityScreen from "images:castopod-activity-screen.webp";
+import CastopodAdminScreen from "images:castopod-admin-screen.webp";
 import XElement from "astro-xelement";
 
 const { button: Button } = XElement;
@@ -13,7 +13,7 @@ function setActive(event: MouseEvent) {
   const target = button.dataset.target;
 
   const illustration = document.querySelector(
-    `svg[id=${target}]`
+    `img[id=${target}]`
   ) as SVGElement;
 
   button.classList.add("bg-gray-200", "font-semibold");
@@ -21,13 +21,13 @@ function setActive(event: MouseEvent) {
   illustration.classList.remove("hidden");
 
   if (target === "website") {
-    const adminIllustration = document.querySelector("svg[id=admin]");
+    const adminIllustration = document.querySelector("img[id=admin]");
     const adminButton = document.querySelector("button[data-target=admin]");
     adminButton.classList.remove("bg-gray-200", "font-semibold");
     adminButton.classList.add("hover:bg-gray-200");
     adminIllustration.classList.add("hidden");
   } else {
-    const websiteIllustration = document.querySelector("svg[id=website]");
+    const websiteIllustration = document.querySelector("img[id=website]");
     const websiteButton = document.querySelector("button[data-target=website]");
     websiteButton.classList.remove("bg-gray-200", "font-semibold");
     websiteButton.classList.add("hover:bg-gray-200");
@@ -62,7 +62,18 @@ function setActive(event: MouseEvent) {
     </div>
   </nav>
 
-  <CastopodActivityScreen id="website" />
+  <img
+    src={CastopodActivityScreen}
+    id="website"
+    alt="Castpod's website with a social feed and news regarding a Podcast."
+    loading="lazy"
+  />
 
-  <CastopodAdminScreen id="admin" className="hidden" />
+  <img
+    src={CastopodAdminScreen}
+    alt="Castopod's admin area to manage your podcasts and episodes."
+    id="admin"
+    class="hidden"
+    loading="lazy"
+  />
 </div>

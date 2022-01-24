@@ -1,10 +1,10 @@
 ---
 import Podcasting20Badge from "assets:Podcasting20Badge";
-import FediverseIllustration from "assets:FediverseIllustration";
-import PromoteIllustration from "assets:PromoteIllustration";
-import BroadcastIllustration from "assets:BroadcastIllustration";
-import AnalyticsIllustration from "assets:AnalyticsIllustration";
-import ValueIllustration from "assets:ValueIllustration";
+import FediverseIllustration from "images:castopod-fediverse-illustration.webp";
+import VideoClipsIllustration from "images:castopod-video-clips-illustration.webp";
+import BroadcastIllustration from "images:castopod-broadcast-illustration.webp";
+import AnalyticsIllustration from "images:castopod-analytics-illustration.webp";
+import ValueIllustration from "images:castopod-value-illustration.webp";
 import Path1 from "assets:DashedPath/Path1";
 import Path2 from "assets:DashedPath/Path2";
 import Path3 from "assets:DashedPath/Path3";
@@ -31,8 +31,11 @@ import { Icon } from "astro-icon";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-1 lg:items-start"
     >
-      <FediverseIllustration
-        className="lg:absolute lg:-right-full -z-10 lg:inset-y-0 m-auto h-96"
+      <img
+        src={FediverseIllustration}
+        alt="A rocket ship traversing the fediverse."
+        class="m-auto lg:absolute lg:-right-full -z-10 lg:inset-y-0 h-96"
+        loading="lazy"
       />
       <div
         class="flex flex-col items-center max-w-md -mt-12 lg:items-start lg:mt-0"
@@ -61,8 +64,11 @@ import { Icon } from "astro-icon";
     <article
       class="relative flex flex-col items-center lg:flex-row lg:col-start-2 lg:row-start-2 lg:items-start"
     >
-      <PromoteIllustration
-        className="lg:absolute lg:-left-full -z-10 lg:inset-y-0 m-auto h-96"
+      <img
+        src={VideoClipsIllustration}
+        alt="Video being clipped and a megaphone on top of it."
+        class="m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96"
+        loading="lazy"
       />
       <div
         class="flex flex-col items-center max-w-md -mt-12 lg:items-start lg:mt-0"
@@ -91,8 +97,11 @@ import { Icon } from "astro-icon";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-3 lg:items-start"
     >
-      <BroadcastIllustration
-        className="lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 m-auto h-96"
+      <img
+        src={BroadcastIllustration}
+        alt="The Castopod icon surrounded by the Apple Podcasts, Spotify, Google Podcasts, Deezer, Podcast Addict and Podfriend logos."
+        class="m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96"
+        loading="lazy"
       />
       <div
         class="flex flex-col items-center max-w-md -mt-12 lg:items-start lg:mt-0"
@@ -121,8 +130,11 @@ import { Icon } from "astro-icon";
     <article
       class="relative flex flex-col items-center lg:flex-row lg:col-start-2 lg:row-start-4 lg:items-start"
     >
-      <AnalyticsIllustration
-        className="lg:absolute lg:-left-full -z-10 lg:inset-y-0 m-auto h-96"
+      <img
+        src={AnalyticsIllustration}
+        alt="A person in front of a graph and arrow going up. À la Stonks."
+        class="m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96"
+        loading="lazy"
       />
       <div
         class="flex flex-col items-center max-w-md -mt-12 lg:items-start lg:mt-0"
@@ -151,8 +163,11 @@ import { Icon } from "astro-icon";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-5 lg:items-start"
     >
-      <ValueIllustration
-        className="lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 m-auto h-96"
+      <img
+        src={ValueIllustration}
+        alt="A money bag dumping dollar, euro and crypro coins."
+        class="m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96"
+        loading="lazy"
       />
       <div
         class="flex flex-col items-center max-w-md -mt-12 lg:items-start lg:mt-0"

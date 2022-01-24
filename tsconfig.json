@@ -6,7 +6,8 @@
       "atoms:*": ["components/atoms/*.astro"],
       "molecules:*": ["components/molecules/*.astro"],
       "organisms:*": ["components/organisms/*.astro"],
-      "assets:*": ["assets/*.astro"]
+      "assets:*": ["assets/*.astro"],
+      "images:*": ["assets/images/*"]
     }
   },
   "include": ["src/**/*.astro"],
