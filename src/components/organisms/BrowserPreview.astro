@@ -29,6 +29,12 @@ function setActive(event: MouseEvent) {
   } else {
     const websiteIllustration = document.querySelector("img[id=website]");
     const websiteButton = document.querySelector("button[data-target=website]");
+    const notificationPing = button.querySelector("span[id=notification]");
+
+    if (notificationPing) {
+      notificationPing.remove();
+    }
+
     websiteButton.classList.remove("bg-gray-200", "font-semibold");
     websiteButton.classList.add("hover:bg-gray-200");
     websiteIllustration.classList.add("hidden");
@@ -40,25 +46,35 @@ function setActive(event: MouseEvent) {
   id="browser-preview"
   class="relative w-full max-w-6xl mx-auto -mt-40 overflow-hidden border-4 border-gray-300 shadow-2xl rounded-xl"
 >
-  <nav class="flex items-center h-5 px-4 bg-gray-300 gap-x-4">
-    <div class="inline-flex gap-x-1">
-      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-    </div>
-    <div class="flex gap-x-1">
+  <nav
+    class="flex items-center h-6 px-4 bg-gray-300 border-b-4 border-gray-300 gap-x-4"
+  >
+    <div class="flex h-full gap-x-1">
       <Button
         @click={setActive}
         data-target="website"
-        class={"px-4 text-sm rounded-t" + activeClass}
+        class={"px-4 h-full text-sm rounded" + activeClass}
       >
         website
       </Button>
       <Button
         @click={setActive}
         data-target="admin"
-        class={"px-4 text-sm rounded-t" + inactiveClass}>admin</Button
+        class={"inline-flex items-center gap-x-1 px-4 h-full text-sm rounded" +
+          inactiveClass}
+        ><span class="relative flex w-2 h-2" id="notification">
+          <span
+            class="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-rose-500"
+          ></span>
+          <span class="relative inline-flex w-2 h-2 rounded-full bg-rose-700"
+          ></span>
+        </span>admin</Button
       >
+    </div>
+    <div class="inline-flex ml-auto gap-x-1">
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
     </div>
   </nav>
 
