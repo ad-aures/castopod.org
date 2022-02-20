@@ -1,7 +1,8 @@
 #!/bin/bash
+set -e
 
 # Install jq to traverse json
-apt-get install jq -y -qq
+apt-get update && apt-get install jq -y -qq
 
 echo "Getting latest Castopod version and package urls ..."
 
