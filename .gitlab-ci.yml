@@ -5,7 +5,10 @@ stages:
   - deploy
 
 before_script:
-  - npm install
+  - npm ci
+  # Generate .env file
+  - chmod +x ./scripts/generate_env.sh
+  - ./scripts/generate_env.sh
 
 cache:
   paths:
@@ -19,7 +22,7 @@ build:
   except:
     - main
 
-build:
+build-production:
   stage: build
   environment:
     name: production
@@ -44,6 +47,7 @@ deploy:
     TEMP_DIRECTORY: $TEMP_DIRECTORY
     DIRECTORY: $DIRECTORY
     SSH_PORT: 3242
+    SOURCE_FOLDER: "dist/"
   before_script:
     # install rsync for file transfers
     - apt-get update && apt-get install rsync -y
@@ -56,7 +60,7 @@ deploy:
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
-    - rsync -avzuh -e "ssh -p $SSH_PORT" dist/ $USER@$HOST:$TEMP_DIRECTORY --progress
+    - rsync -avzuh -e "ssh -p $SSH_PORT" $SOURCE_FOLDER $USER@$HOST:$TEMP_DIRECTORY --progress
     - ssh $USER@$HOST -p $SSH_PORT "rsync -rtv $TEMP_DIRECTORY $DIRECTORY"
   only:
     - main

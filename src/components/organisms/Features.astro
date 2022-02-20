@@ -232,20 +232,33 @@ import { Icon } from "astro-icon";
       <strong>persons</strong>, <strong>transcripts</strong>,
       <strong>chapters</strong>, and much more!
     </p>
-    <a
-      href="https://code.podlibre.org/podlibre/castopod-host/uploads/480a03db991976b229ae7bedfc990999/castopod-host-1.0.0-beta.8.zip"
-      class="inline-flex items-center px-4 py-2 mt-6 font-semibold text-white rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
-      download
-      data-analytics={'"Download" , ' +
-        JSON.stringify({
-          props: { via: "Features CTA", version: "1.0.0-beta.8" },
-        })}
+    <div
+      class="flex flex-wrap items-center justify-center mt-6 gap-x-2 gap-y-4"
     >
-      <Icon
-        pack="ri"
-        name="download-cloud-2-fill"
-        class="h-6 text-pine-800 group-hover:text-pine-500"
-      />Download Castopod
-    </a>
+      <a
+        href=${import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
+        class="inline-flex items-center px-4 py-2 font-semibold text-white border-2 rounded-full shadow-md hover:border-pine-800 border-pine-500 group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
+        download
+        data-analytics={'"Download", ' +
+          JSON.stringify({
+            props: { via: "Features CTA", version: import.meta.env.PUBLIC_CASTOPOD_VERSION },
+          })}
+      >
+        <Icon
+          pack="ri"
+          name="download-cloud-2-fill"
+          class="h-6 text-pine-800 group-hover:text-pine-500"
+        />Download Castopod
+      </a>
+      <a
+        href="https://docs.castopod.org/"
+        class="inline-flex items-center px-4 py-2 font-semibold text-black bg-white border-2 rounded-full border-pine-500 gap-x-2 hover:bg-pine-100 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
+        data-analytics={'"Documentation", ' +
+          JSON.stringify({ props: { via: "Features CTA" } })}
+      >
+        Get Started
+        <Icon pack="ri" name="arrow-right-line" class="h-6 text-pine-500" />
+      </a>
+    </div>
   </article>
 </section>
