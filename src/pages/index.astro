@@ -26,7 +26,14 @@ import { SEO } from "astro-seo";
             "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
           type: "website",
           image: "https://castopod.org/assets/images/open-graph.jpg",
+          
           url: "https://castopod.org/",
+        },
+        image: {
+            alt: "Castopod mascot waving hello and holding a browser showcasing Castopod.",
+            width: "1200",
+            height: "630",
+            type: "image/jpeg"
         },
       }}
       twitter={{
@@ -34,40 +41,15 @@ import { SEO } from "astro-seo";
         site: "@castopod",
         creator: "@ad_aures",
       }}
-      extend={{
-        meta: [
-          {
-            name: "og:image:type",
-            content: "image/jpeg",
-          },
-          {
-            name: "og:image:width",
-            content: 1200,
-          },
-          {
-            name: "og:image:height",
-            content: 630,
-          },
-          {
-            name: "og:image:alt",
-            content:
-              "Castopod mascot waving hello and hoding a browser showcasing Castopod.",
-          },
-        ],
-      }}
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href={Astro.resolve("../styles/index.css")}
     />
     <script
       defer
+      type="text/partytown"
       data-domain="castopod.org"
       src="https://analytics.castopod.org/js/plausible.js"></script>
   </head>
 
-  <body class="overflow-x-hidden">
+  <body class="grid overflow-x-hidden">
     <Header />
     <main>
       <BrowserPreview />
