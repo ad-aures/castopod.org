@@ -1,0 +1,39 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "16"
+    }
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "css.validate": false,
+    "color-highlight.markerType": "dot-before"
+  },
+  "extensions": [
+    "astro-build.astro-vscode",
+    "bradlc.vscode-tailwindcss",
+    "DavidAnson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "heybourn.headwind",
+    "mikestead.dotenv",
+    "naumovs.color-highlight",
+    "pflannery.vscode-versionlens",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "wayou.vscode-todo-highlight",
+    "yzhang.markdown-all-in-one"
+  ],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+  // run npm install command after the container is created.
+  "postCreateCommand": "npm install",
+  "features": {
+    "git": "latest"
+  }
+}

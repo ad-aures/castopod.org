@@ -189,8 +189,8 @@ import { Icon } from "astro-icon";
           <a
             href="https://adaures.com/#listen-to-click"
             class="underline hover:no-underline decoration-pine-500 decoration-2"
-            >Ad Aures’ contextual solution</a
-          >
+            >Ad Aures’ contextual solution
+          </a>
           for example).
         </p>
       </div>
@@ -217,14 +217,14 @@ import { Icon } from "astro-icon";
       <a
         href="https://podcastindex.org/apps"
         class="underline decoration-pine-500 decoration-2 hover:no-underline"
-        >many platforms</a
-      >
+        >many platforms
+      </a>
       thanks to the
       <a
         href="https://podcastindex.org/"
         class="underline decoration-pine-500 decoration-2 hover:no-underline"
-        >Podcast Index</a
-      >
+        >Podcast Index
+      </a>
       community.
     </p>
     <p class="max-w-xl mx-auto mt-4 text-xl">
@@ -236,12 +236,15 @@ import { Icon } from "astro-icon";
       class="flex flex-wrap items-center justify-center mt-6 gap-x-2 gap-y-4"
     >
       <a
-        href=${import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
+        href="${import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}"
         class="inline-flex items-center px-4 py-2 font-semibold text-white border-2 border-transparent rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
         download
         data-analytics={'"Download", ' +
           JSON.stringify({
-            props: { via: "Features CTA", version: import.meta.env.PUBLIC_CASTOPOD_VERSION },
+            props: {
+              via: "Features CTA",
+              version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
+            },
           })}
       >
         <Icon

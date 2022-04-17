@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "lint": "eslint --ext js,ts src",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint --fix \"src/**/*.css\"",
     "prettier": "prettier --check --ignore-path .gitignore .",
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@astrojs/partytown": "^0.1.2",
@@ -18,13 +21,25 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@tailwindcss/typography": "^0.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "astro": "1.0.0-beta.12",
     "astro-xelement": "^3.2.0",
     "autoprefixer": "^10.4.4",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
     "prettier": "2.6.2",
-    "prettier-plugin-astro": "^0.0.12",
+    "prettier-plugin-astro": "^0.1.0-next.4",
+    "stylelint": "^14.7.0",
+    "stylelint-config-standard": "^25.0.0",
     "tailwindcss": "^3.0.24"
   },
   "config": {
@@ -35,5 +50,10 @@
   "dependencies": {
     "astro-icon": "^0.7.1",
     "astro-seo": "^0.5.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md,.astro}": "prettier --write"
   }
 }
