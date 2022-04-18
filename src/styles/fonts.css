@@ -1,29 +1,29 @@
 /* inter-regular */
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(""), url("../assets/fonts/inter-regular.woff2") format("woff2"),
+  src: url("../assets/fonts/inter-regular.woff2") format("woff2"),
     url("../assets/fonts/inter-regular.woff") format("woff");
 }
 
 /* inter-600 */
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local(""), url("../assets/fonts/inter-600.woff2") format("woff2"),
+  src: url("../assets/fonts/inter-600.woff2") format("woff2"),
     url("../assets/fonts/inter-600.woff") format("woff");
 }
 
 /* rubik-700 */
 @font-face {
-  font-family: "Rubik";
+  font-family: Rubik;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local(""), url("../assets/fonts/rubik-700.woff2") format("woff2"),
+  src: url("../assets/fonts/rubik-700.woff2") format("woff2"),
     url("../assets/fonts/rubik-700.woff") format("woff");
 }

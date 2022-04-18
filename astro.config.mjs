@@ -5,13 +5,8 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    sitemap({
-      filter: true,
-    }),
-    partytown(),
-  ],
+  site: "https://castopod.org/",
+  integrations: [tailwind(), sitemap(), partytown()],
   vite: {
     ssr: {
       external: ["svgo"],
