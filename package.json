@@ -15,7 +15,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@astrojs/partytown": "^0.1.2",
     "@astrojs/sitemap": "^0.1.0",
     "@astrojs/tailwind": "^0.2.0",
     "@commitlint/cli": "^16.2.3",

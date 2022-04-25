@@ -2,6 +2,7 @@
 import Footer from "organisms:Footer";
 import { Icon } from "astro-icon";
 import CastopodLogo from "assets:CastopodLogo";
+import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
 
 import { SEO } from "astro-seo";
 ---
@@ -17,7 +18,6 @@ import { SEO } from "astro-seo";
     />
     <script
       defer
-      type="text/partytown"
       data-domain="castopod.org"
       src="https://analytics.castopod.org/js/plausible.js"></script>
   </head>
@@ -192,5 +192,6 @@ import { SEO } from "astro-seo";
       </div>
     </main>
     <Footer />
+    <AnalyticsEventsScript />
   </body>
 </html>
