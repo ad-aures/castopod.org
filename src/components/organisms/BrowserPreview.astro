@@ -1,7 +1,9 @@
 ---
 import CastopodActivityScreen from "images:castopod-activity-screen.webp";
 import CastopodAdminScreen from "images:castopod-admin-screen.webp";
+import NotificationPulse from "atoms:NotificationPulse";
 import XElement from "astro-xelement";
+import { t } from "i18next";
 
 const { button: Button } = XElement;
 const activeClass = " bg-gray-200 font-semibold";
@@ -53,22 +55,16 @@ function setActive(event: MouseEvent) {
       <Button
         @click={setActive}
         data-target="website"
-        class={"px-4 h-full text-sm rounded" + activeClass}
+        class={"px-4 h-full text-sm rounded lowercase" + activeClass}
       >
-        website
+        {t("browserPreview.website")}
       </Button>
       <Button
         @click={setActive}
         data-target="admin"
-        class={"inline-flex items-center gap-x-1 px-4 h-full text-sm rounded" +
+        class={"inline-flex items-center gap-x-1 px-4 h-full text-sm rounded lowercase" +
           inactiveClass}
-        ><span class="relative flex w-2 h-2" id="notification">
-          <span
-            class="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-rose-500"
-          ></span>
-          <span class="relative inline-flex w-2 h-2 rounded-full bg-rose-700"
-          ></span>
-        </span>admin
+        ><NotificationPulse id="notification" />{t("browserPreview.admin")}
       </Button>
     </div>
     <div class="inline-flex ml-auto gap-x-1">
@@ -81,15 +77,15 @@ function setActive(event: MouseEvent) {
   <img
     src={CastopodActivityScreen}
     id="website"
-    alt="Castpod's website with a social feed and news regarding a Podcast."
+    alt={t("browserPreview.websiteImageAlt")}
     class="aspect-[3/2]"
     loading="lazy"
   />
 
   <img
     src={CastopodAdminScreen}
-    alt="Castopod's admin area to manage your podcasts and episodes."
     id="admin"
+    alt={t("browserPreview.adminImageAlt")}
     class="hidden aspect-[3/2]"
     loading="lazy"
   />

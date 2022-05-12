@@ -1,35 +1,41 @@
 ---
 import AdauresLogo from "assets:AdauresLogo";
+import { t } from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
 
 const sections = [
   {
-    title: "Links",
+    title: t("footer.links"),
     items: [
-      { type: "link", link: "mailto:hello@castopod.org", label: "Contact us" },
+      {
+        type: "link",
+        link: "mailto:hello@castopod.org",
+        label: t("common.contactUs"),
+      },
       {
         type: "link",
         link: "https://code.castopod.org/adaures/castopod/issues",
-        label: "Issues",
+        label: t("footer.issues"),
       },
       {
         type: "link",
         link: "https://code.castopod.org/adaures/castopod/",
-        label: "Source code",
+        label: t("common.sourceCode"),
       },
       {
         type: "link",
         link: "https://github.com/ad-aures/castopod",
-        label: "Github [mirror]",
+        label: `Github [${t("common.mirror").toLowerCase()}]`,
       },
       {
         type: "link",
         link: "https://blog.castopod.org/",
-        label: "Blog",
+        label: t("common.blog"),
       },
     ],
   },
   {
-    title: "Community",
+    title: t("footer.community"),
     items: [
       {
         type: "link",
@@ -46,9 +52,9 @@ const sections = [
     ],
   },
   {
-    title: "About Ad Aures",
+    title: t("footer.aboutAdAures"),
     items: [
-      { type: "link", link: "https://adaures.com", label: "Website" },
+      { type: "link", link: "https://adaures.com", label: t("footer.website") },
       { type: "link", link: "https://twitter.com/ad_aures", label: "Twitter" },
       {
         type: "link",
@@ -58,16 +64,16 @@ const sections = [
     ],
   },
   {
-    title: "Legal",
+    title: t("footer.legal"),
     items: [
       {
         type: "link",
         link: "/legal",
-        label: "Legal notice",
+        label: t("footer.legalNotice"),
       },
       {
         type: "notice",
-        label: "🍪 This website does not have any cookies!",
+        label: `🍪 ${t("footer.cookieNotice")}`,
       },
     ],
   },
@@ -103,7 +109,12 @@ const sections = [
     </div>
     <div class="flex flex-col items-start self-center max-w-sm mx-auto lg:mx-0">
       <AdauresLogo className="h-8" />
-      <small>Copyright © 2022 Ad Aures. All rights reserved.</small>
+      <small>{t("footer.copyright")}</small>
+      <LanguageSelector
+        showFlag={true}
+        baseLanguage="en"
+        className="appearance-none bg-pine-900 px-2 py-1"
+      />
     </div>
   </div>
 </footer>

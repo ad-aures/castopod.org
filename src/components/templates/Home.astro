@@ -1,0 +1,62 @@
+---
+import Features from "organisms:Features";
+import Footer from "organisms:Footer";
+import Sponsors from "organisms:Sponsors";
+import Community from "organisms:Community";
+import OpenSource from "organisms:OpenSource";
+import Header from "organisms:Header";
+import BrowserPreview from "organisms:BrowserPreview";
+import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
+import { SEO } from "astro-seo";
+import i18next, { t } from "i18next";
+---
+
+<html lang={i18next.language} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <SEO
+      title={t("seo.title")}
+      description={t("seo.description")}
+      canonical="https://castopod.org/"
+      openGraph={{
+        basic: {
+          title: t("seo.ogTitle"),
+          description: t("seo.description"),
+          type: "website",
+          image: "https://castopod.org/assets/images/open-graph.jpg",
+          url: "https://castopod.org/",
+        },
+        image: {
+          alt: t("seo.ogImageAlt"),
+          width: "1200",
+          height: "630",
+          type: "image/jpeg",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@castopod",
+        creator: "@ad_aures",
+      }}
+    />
+    <script
+      defer
+      data-domain="castopod.org"
+      src="https://analytics.castopod.org/js/plausible.js"></script>
+  </head>
+
+  <body class="grid overflow-x-hidden">
+    <Header />
+    <main>
+      <BrowserPreview />
+      <Features />
+      <OpenSource />
+      <Community />
+      <Sponsors />
+    </main>
+    <Footer />
+    <AnalyticsEventsScript />
+  </body>
+</html>

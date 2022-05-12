@@ -1,0 +1,24 @@
+---
+import i18next from "i18next";
+import Legal from "templates:Legal";
+
+export function getStaticPaths() {
+  const languageRoutes = [];
+
+  i18next.languages.forEach((lang) => {
+    // filter out base language
+    // TODO: get base language from config
+    if (lang !== "en") {
+      languageRoutes.push({ params: { lang } });
+    }
+  });
+
+  return languageRoutes;
+}
+
+const { lang } = Astro.params;
+
+i18next.changeLanguage(lang as string);
+---
+
+<Legal />

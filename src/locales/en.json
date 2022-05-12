@@ -1,0 +1,92 @@
+{
+  "common": {
+    "download": "Download",
+    "downloadCastopod": "Download Castopod",
+    "getStarted": "Get started",
+    "sourceCode": "Source code",
+    "blog": "Blog",
+    "docs": "Docs",
+    "documentation": "Documentation",
+    "followOnFediverse": "Follow us on the Fediverse",
+    "followOnTwitter": "Follow us on Twitter",
+    "joinDiscord": "Join our Discord server",
+    "contactUs": "Contact us",
+    "mirror": "Mirror",
+    "learnMore": "Learn more"
+  },
+  "seo": {
+    "title": "Castopod by Ad Aures | Your Free & Open-source Podcast Host",
+    "ogTitle": "Castopod | Your Free & Open-source Podcast Host",
+    "description": "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
+    "ogImageAlt": "Castopod mascot waving hello and holding a browser showcasing Castopod."
+  },
+  "header": {
+    "displayTitle": "The free and open-source solution to your podcasting 2.0 journey",
+    "description": "Self-host your podcasts with ease, keep control over what you create and talk to your audience without any middleman. Your podcast and your audience belong to you and you only."
+  },
+  "browserPreview": {
+    "website": "Website",
+    "admin": "Admin",
+    "websiteImageAlt": "Castpod's website with a social feed and news regarding a Podcast.",
+    "adminImageAlt": "Castopod's admin area to manage your podcasts and episodes."
+  },
+  "features": {
+    "title": "What you expect from a podcast hosting solution, and much more…",
+    "fediverse": {
+      "title": "Talk to your audience, directly",
+      "description": "Interact with your audience in the fediverse, a decentralized social network. Your podcast becomes a social network: your episodes can be shared, liked and commented on without depending on <0>anyone</0>.",
+      "illustrationAlt": "A rocket ship with Castopod traversing the fediverse."
+    },
+    "marketing": {
+      "title": "Promote your podcast",
+      "description": "Castopod helps you get noticed by enforcing best practices and by giving you tools to post easily on all social media. Create video clips and soundbites from your episodes and share them everywhere!",
+      "illustrationAlt": "Video being clipped and a megaphone on top of it."
+    },
+    "broadcast": {
+      "title": "Your podcast, everywhere",
+      "description": "Manage your podcast in one place, broadcast it everywhere using RSS. Castopod allows you to have your podcast show up on Apple Podcasts, Spotify, Deezer, Podcast Addict, Podfriend, …",
+      "illustrationAlt": "Castopod surrounded by the Apple Podcasts, Spotify, Google Podcasts, Deezer, Podcast Addict and Podfriend logos."
+    },
+    "analytics": {
+      "title": "Built-in analytics",
+      "description": "Get all the insights of your podcasts and episodes following the market standard with IABv2 guidelines. All of the gathered data is anonymized, with respect for your listeners' rights and in conformity with GDPR, CCPA and LGPD laws.",
+      "illustrationAlt": "A person in front of a graph and arrow going up. À la Stonks."
+    },
+    "value": {
+      "title": "Value your work",
+      "description": "Publish your podcast for free or monetize it. Get tips, get paid with value4value, or automatically embed listen‑to‑click ads (using <0>Ad Aures’ contextual solution</0> for example).",
+      "illustrationAlt": "A money bag dumping coins."
+    },
+    "podcasting20": {
+      "title": "Join the Podcasting 2.0 movement!",
+      "podcasting20Certified": "Podcasting 2.0 certified",
+      "description": "Unlock features never seen before and available on <0>many platforms</0> thanks to the <1>Podcast Index</1> community.",
+      "description2": "Castopod allows you to specify <0>locations</0>, <1>persons</1>, <2>transcripts</2>, <3>chapters</3>, and much more!"
+    }
+  },
+  "openSource": {
+    "title": "Free and open-source",
+    "weLoveOpenSource": "We absolutely love open-source!",
+    "description": "Castopod is licensed under <0>AGPL v3</0>, it is open to <1>everyone</1>, in <2>every sense</2>, and meant to stay this way."
+  },
+  "community": {
+    "title": "Join our community",
+    "vision": "Our goal is to keep the podcasting ecosystem decentralized ensuring breeding grounds for innovation and creativity.",
+    "join": " Join our community and share your experience and expertise!"
+  },
+  "sponsors": {
+    "title": "Sponsored by",
+    "becomeASponsor": "Become a sponsor"
+  },
+  "footer": {
+    "copyright": "Copyright © 2022 Ad Aures. All rights reserved.",
+    "links": "Links",
+    "community": "Community",
+    "aboutAdAures": "About Ad Aures",
+    "legal": "Legal",
+    "issues": "Issues",
+    "website": "Website",
+    "legalNotice": "Legal notice",
+    "cookieNotice": "This website does not have any cookies!"
+  }
+}

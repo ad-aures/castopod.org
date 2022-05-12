@@ -1,5 +1,7 @@
 ---
+import { Trans } from "astro-i18next/components";
 import { Icon } from "astro-icon";
+import { t } from "i18next";
 ---
 
 <section id="open-source" class="pb-64 text-center pt-28 bg-pine-50">
@@ -7,17 +9,19 @@ import { Icon } from "astro-icon";
     <h2
       class="relative z-10 inline text-4xl font-bold font-display after:bg-pine-100 after:-z-10 text-pine-800 after:w-full after:h-1/2 after:absolute after:left-0 after:-bottom-1 after:rounded-full"
     >
-      Free and open-source
+      {t("openSource.title")}
     </h2>
     <p class="mt-10 text-xl">
-      We absolutely love open-source!<br />
-      Castopod is licensed under
-      <a
-        href="https://code.castopod.org/adaures/castopod/-/blob/develop/LICENSE.md"
-        class="font-semibold hover:underline decoration-pine-500 decoration-2"
-        >AGPL v3
-      </a>, it is open <em>to everyone</em>, <em>in every sense</em>, and meant
-      to stay this way.
+      {t("openSource.weLoveOpenSource")}<br />
+      <Trans i18nKey="openSource.description">
+        Castopod is licensed under
+        <a
+          href="https://code.castopod.org/adaures/castopod/-/blob/develop/LICENSE.md"
+          class="font-semibold hover:underline decoration-pine-500 decoration-2"
+          >AGPL v3
+        </a>, it is open <em>to everyone</em>, <em>in every sense</em>, and
+        meant to stay this way.
+      </Trans>
     </p>
 
     <div class="flex items-center justify-center mt-8 gap-x-2">
@@ -29,7 +33,7 @@ import { Icon } from "astro-icon";
           pack="ri"
           name="gitlab-fill"
           class="h-6 text-pine-800 group-hover:text-pine-500"
-        />Source code
+        />{t("common.sourceCode")}
       </a>
       <a
         href="https://github.com/ad-aures/castopod"

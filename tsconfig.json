@@ -2,12 +2,15 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "baseUrl": "src" /* Base directory to resolve non-absolute module names. */,
+    "lib": ["ES2021"],
     "paths": {
       "atoms:*": ["components/atoms/*.astro"],
       "molecules:*": ["components/molecules/*.astro"],
       "organisms:*": ["components/organisms/*.astro"],
+      "templates:*": ["components/templates/*.astro"],
       "assets:*": ["assets/*.astro"],
-      "images:*": ["assets/images/*"]
+      "images:*": ["assets/images/*"],
+      "styles:*": ["styles/*"]
     }
   },
   "include": ["src/**/*.astro"],

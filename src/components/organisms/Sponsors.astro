@@ -2,13 +2,14 @@
 import AdauresLogo from "assets:AdauresLogo";
 import NLnetLogo from "assets:NLnetLogo";
 import { Icon } from "astro-icon";
+import { t } from "i18next";
 ---
 
 <section id="sponsors" class="flex flex-col items-center p-16 text-center">
   <h2
     class="relative z-10 inline text-4xl font-bold font-display after:bg-pine-100 after:-z-10 text-pine-800 after:w-full after:h-1/2 after:absolute after:left-0 after:-bottom-1 after:rounded-full"
   >
-    Sponsored by
+    {t("sponsors.title")}
   </h2>
   <div class="flex flex-wrap items-center justify-center gap-12 mt-8">
     <a href="https://adaures.com/" title="Ad Aures"
@@ -20,7 +21,11 @@ import { Icon } from "astro-icon";
     <a
       href="https://opencollective.com/castopod/contribute"
       class="inline-flex items-center font-semibold underline gap-x-1 decoration-pine-500 decoration-4 hover:no-underline"
-      >Become a sponsor<Icon pack="ri" name="arrow-right-line" class="h-6" />
+      >{t("sponsors.becomeASponsor")}<Icon
+        pack="ri"
+        name="arrow-right-line"
+        class="h-6"
+      />
     </a>
   </div>
 </section>

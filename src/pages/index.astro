@@ -1,63 +1,9 @@
 ---
-import Features from "organisms:Features";
-import Footer from "organisms:Footer";
-import Sponsors from "organisms:Sponsors";
-import Community from "organisms:Community";
-import OpenSource from "organisms:OpenSource";
-import Header from "organisms:Header";
-import BrowserPreview from "organisms:BrowserPreview";
-import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
-import { SEO } from "astro-seo";
-import "../styles/index.css";
+import Home from "templates:Home";
+import i18next from "i18next";
+import "styles:index.css";
+
+i18next.changeLanguage("en");
 ---
 
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <SEO
-      title="Castopod by Ad Aures | Your Free & Open-source Podcast Host"
-      description="Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content."
-      canonical="https://castopod.org/"
-      openGraph={{
-        basic: {
-          title: "Castopod | Your Free & Open-source Podcast Host",
-          description:
-            "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
-          type: "website",
-          image: "https://castopod.org/assets/images/open-graph.jpg",
-          url: "https://castopod.org/",
-        },
-        image: {
-          alt: "Castopod mascot waving hello and holding a browser showcasing Castopod.",
-          width: "1200",
-          height: "630",
-          type: "image/jpeg",
-        },
-      }}
-      twitter={{
-        card: "summary_large_image",
-        site: "@castopod",
-        creator: "@ad_aures",
-      }}
-    />
-    <script
-      defer
-      data-domain="castopod.org"
-      src="https://analytics.castopod.org/js/plausible.js"></script>
-  </head>
-
-  <body class="grid overflow-x-hidden">
-    <Header />
-    <main>
-      <BrowserPreview />
-      <Features />
-      <OpenSource />
-      <Community />
-      <Sponsors />
-    </main>
-    <Footer />
-    <AnalyticsEventsScript />
-  </body>
-</html>
+<Home />

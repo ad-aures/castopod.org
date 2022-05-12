@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon";
+import { t } from "i18next";
+
+export interface Props {
+  href: string;
+  className: string;
+}
+
+const { href, className } = Astro.props;
+---
+
+<a
+  class={`flex justify-between w-full px-2 py-1 rounded-full gap-x-2 group text-pine-900 bg-pine-100 ${className}`}
+  href={href}
+  role="alert"
+>
+  <p class="flex-1 w-0 truncate">
+    <slot></slot>
+  </p>
+
+  <span
+    class="inline-flex items-center flex-shrink-0 font-semibold gap-x-1 group-hover:underline decoration-pine-500 decoration-2"
+  >
+    {t("common.learnMore")}
+    <Icon pack="ri" name="arrow-right-line" class="h-6" />
+  </span>
+</a>

@@ -13,13 +13,15 @@ import Path5 from "assets:DashedPath/Path5";
 import Path6 from "assets:DashedPath/Path6";
 import StraightPath from "assets:DashedPath/StraightPath";
 import { Icon } from "astro-icon";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section id="features" class="container py-24">
   <h2
     class="relative max-w-lg mx-auto text-4xl font-bold text-center font-display text-pine-800"
   >
-    What you expect from a podcast hosting solution, and much more…
+    {t("features.title")}
     <StraightPath
       className="lg:hidden absolute h-24 -bottom-48 mx-auto inset-x-0"
     />
@@ -33,7 +35,7 @@ import { Icon } from "astro-icon";
     >
       <img
         src={FediverseIllustration}
-        alt="A rocket ship with Castopod traversing the fediverse."
+        alt={t("features.fediverse.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-full -z-10 lg:inset-y-0 h-96 aspect-square"
         loading="lazy"
       />
@@ -48,12 +50,14 @@ import { Icon } from "astro-icon";
             name="checkbox-circle-fill"
             class="absolute h-6 top-1 -left-8"
           />
-          Talk to your audience, directly
+          {t("features.fediverse.title")}
         </h2>
         <p class="mt-2">
-          Interact with your audience in the fediverse, a decentralized social
-          network. Your podcast becomes a social network: your episodes can be
-          shared, liked and commented on without depending on <em>anyone</em>.
+          <Trans i18nKey="features.fediverse.description">
+            Interact with your audience in the fediverse, a decentralized social
+            network. Your podcast becomes a social network: your episodes can be
+            shared, liked and commented on without depending on <em>anyone</em>.
+          </Trans>
         </p>
       </div>
       <StraightPath
@@ -66,7 +70,7 @@ import { Icon } from "astro-icon";
     >
       <img
         src={VideoClipsIllustration}
-        alt="Video being clipped and a megaphone on top of it."
+        alt={t("features.marketing.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96 aspect-square"
         loading="lazy"
       />
@@ -81,12 +85,10 @@ import { Icon } from "astro-icon";
             name="checkbox-circle-fill"
             class="absolute h-6 top-1 -left-8"
           />
-          Promote your podcast
+          {t("features.marketing.title")}
         </h2>
         <p class="mt-2">
-          Castopod helps you get noticed by enforcing best practices and by
-          giving you tools to post easily on all social media. Create video
-          clips and soundbites from your episodes and share them everywhere!
+          {t("features.marketing.description")}
         </p>
       </div>
       <StraightPath
@@ -99,7 +101,7 @@ import { Icon } from "astro-icon";
     >
       <img
         src={BroadcastIllustration}
-        alt="The Castopod icon surrounded by the Apple Podcasts, Spotify, Google Podcasts, Deezer, Podcast Addict and Podfriend logos."
+        alt={t("features.broadcast.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96 aspect-square"
         loading="lazy"
       />
@@ -114,12 +116,10 @@ import { Icon } from "astro-icon";
             name="checkbox-circle-fill"
             class="absolute h-6 top-1 -left-8"
           />
-          Your podcast, everywhere
+          {t("features.broadcast.title")}
         </h2>
         <p class="mt-2">
-          Manage your podcast in one place, broadcast it everywhere using RSS.
-          Castopod allows you to have your podcast show up on Apple Podcasts,
-          Spotify, Deezer, Podcast Addict, Podfriend, …
+          {t("features.broadcast.description")}
         </p>
       </div>
       <StraightPath
@@ -132,7 +132,7 @@ import { Icon } from "astro-icon";
     >
       <img
         src={AnalyticsIllustration}
-        alt="A person in front of a graph and arrow going up. À la Stonks."
+        alt={t("features.analytics.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96 aspect-square"
         loading="lazy"
       />
@@ -147,12 +147,10 @@ import { Icon } from "astro-icon";
             name="checkbox-circle-fill"
             class="absolute h-6 top-1 -left-8"
           />
-          Built-in analytics
+          {t("features.analytics.title")}
         </h2>
         <p class="mt-2">
-          Get all the insights of your podcasts and episodes with anonymized
-          data, in conformity with GDPR, CCPA and LGPD. Moreover, this is done
-          following the market standard with IABv2 guidelines.
+          {t("features.analytics.description")}
         </p>
       </div>
       <StraightPath
@@ -165,7 +163,7 @@ import { Icon } from "astro-icon";
     >
       <img
         src={ValueIllustration}
-        alt="A money bag dumping dollar, euro and crypro coins."
+        alt={t("features.value.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96 aspect-square"
         loading="lazy"
       />
@@ -180,17 +178,19 @@ import { Icon } from "astro-icon";
             name="checkbox-circle-fill"
             class="absolute h-6 top-1 -left-8"
           />
-          Value your work
+          {t("features.value.title")}
         </h2>
         <p class="mt-2">
-          Publish your podcast for free or monetize it. Get tips, get paid with
-          value4value, or automatically embed listen‑to‑click ads (using
-          <a
-            href="https://adaures.com/#listen-to-click"
-            class="underline hover:no-underline decoration-pine-500 decoration-2"
-            >Ad Aures’ contextual solution
-          </a>
-          for example).
+          <Trans i18nKey="features.value.description">
+            Publish your podcast for free or monetize it. Get tips, get paid
+            with value4value, or automatically embed listen‑to‑click ads (using
+            <a
+              href="https://adaures.com/#listen-to-click"
+              class="underline hover:no-underline decoration-pine-500 decoration-2"
+              >Ad Aures’ contextual solution
+            </a>
+            for example).
+          </Trans>
         </p>
       </div>
       <StraightPath
@@ -203,39 +203,43 @@ import { Icon } from "astro-icon";
     <Path6 className="hidden lg:block absolute h-24 -top-1/2 left-1/3" />
 
     <h2 class="text-4xl font-bold font-display text-pine-800">
-      Join the Podcasting 2.0 movement!
+      {t("features.podcasting20.title")}
     </h2>
     <a
       href="https://github.com/Podcastindex-org"
-      title="Podcasting 2.0 certified"
+      title={t("features.podcasting20.podcasting20Certified")}
     >
       <Podcasting20Badge className="h-5 mx-auto my-8" />
     </a>
     <p class="max-w-xl mx-auto text-xl">
-      Unlock features never seen before and available on
-      <a
-        href="https://podcastindex.org/apps"
-        class="underline decoration-pine-500 decoration-2 hover:no-underline"
-        >many platforms
-      </a>
-      thanks to the
-      <a
-        href="https://podcastindex.org/"
-        class="underline decoration-pine-500 decoration-2 hover:no-underline"
-        >Podcast Index
-      </a>
-      community.
+      <Trans i18nKey="features.podcasting20.description">
+        Unlock features never seen before and available on
+        <a
+          href="https://podcastindex.org/apps"
+          class="underline decoration-pine-500 decoration-2 hover:no-underline"
+          >many platforms
+        </a>
+        thanks to the
+        <a
+          href="https://podcastindex.org/"
+          class="underline decoration-pine-500 decoration-2 hover:no-underline"
+          >Podcast Index
+        </a>
+        community.
+      </Trans>
     </p>
     <p class="max-w-xl mx-auto mt-4 text-xl">
-      Castopod allows you to specify <strong>locations</strong>,
-      <strong>persons</strong>, <strong>transcripts</strong>,
-      <strong>chapters</strong>, and much more!
+      <Trans i18nKey="features.podcasting20.description2">
+        Castopod allows you to specify <strong>locations</strong>,
+        <strong>persons</strong>, <strong>transcripts</strong>,
+        <strong>chapters</strong>, and much more!
+      </Trans>
     </p>
     <div
       class="flex flex-wrap items-center justify-center mt-6 gap-x-2 gap-y-4"
     >
       <a
-        href="${import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}"
+        href={import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
         class="inline-flex items-center px-4 py-2 font-semibold text-white border-2 border-transparent rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
         download
         data-analytics={'"Download", ' +
@@ -250,7 +254,7 @@ import { Icon } from "astro-icon";
           pack="ri"
           name="download-cloud-2-fill"
           class="h-6 text-pine-800 group-hover:text-pine-500"
-        />Download Castopod
+        />{t("common.downloadCastopod")}
       </a>
       <a
         href="https://docs.castopod.org/"
@@ -258,7 +262,7 @@ import { Icon } from "astro-icon";
         data-analytics={'"Documentation", ' +
           JSON.stringify({ props: { via: "Features CTA" } })}
       >
-        Get Started
+        {t("common.getStarted")}
         <Icon pack="ri" name="arrow-right-line" class="h-6 text-pine-500" />
       </a>
     </div>
