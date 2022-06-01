@@ -21,8 +21,8 @@
     "ogImageAlt": "La mascotte Castopod disant bonjour et tenant un navigateur montrant Castopod."
   },
   "header": {
-    "displayTitle": "La solution libre & gratuite pour démarrer votre podcast 2.0",
-    "description": "Hébergez vos podcasts avec sérénité, gardez le contrôle sur ce que vous créez et parlez à votre public sans aucun intermédiaire. Votre podcast et votre audience n'appartiennent qu'à vous, et vous uniquement."
+    "displayTitle": "La solution libre & gratuite pour lancer votre podcast 2.0",
+    "description": "Hébergez vos podcasts sereinement, gardez le contrôle sur ce que vous créez et discutez avec votre public sans aucun intermédiaire. Votre podcast et votre audience n'appartiennent qu'à vous, et vous uniquement."
   },
   "browserPreview": {
     "website": "Site web",
@@ -33,28 +33,28 @@
   "features": {
     "title": "Ce que vous attendez d'une solution d'hébergement de podcasts, et bien plus…",
     "fediverse": {
-      "title": "Parlez avec votre public",
+      "title": "Discutez avec votre public",
       "description": "Intéragissez avec votre audience dans le fédivers, un réseau social décentralisé. Votre podcast devient un réseau social : vos épisodes peuvent être partagés, aimés et commentés sans dépendre de <0>personne</0>.",
       "illustrationAlt": "Une fusée spatiale contenant Castopod traversant le fédivers."
     },
     "marketing": {
       "title": "Propulsez votre podcast",
-      "description": "Castopod vous aide à vous mettre en avant grâce aux meilleures pratiques et en vous offrant les outils nécessaires pour publier sur tous les réseaux sociaux. Créez des extraits vidéos et sonnores de vos épisodes et partagez les partout !",
+      "description": "Castopod vous aide à vous mettre en avant grâce aux meilleures pratiques et en vous offrant les outils nécessaires pour publier sur tous les réseaux sociaux. Créez des extraits vidéos et sonores de vos épisodes et partagez-les partout !",
       "illustrationAlt": "Video being clipped and a megaphone on top of it."
     },
     "broadcast": {
       "title": "Votre podcast, partout",
-      "description": "Gérez votre podcast au même endroit, et diffusez le partout grâce à RSS. Castopod vous permet de diffuser votre podcast sur Apple Podcasts, Deezer, Spotify, Podcast Addict, Podfriend…",
+      "description": "Gérez votre podcast au même endroit et diffusez le partout grâce au flux RSS. Castopod vous permet de diffuser votre podcast sur Apple Podcasts, Deezer, Spotify, Podcast Addict, Podfriend…",
       "illustrationAlt": "Castopod entouré par les logos d'Apple Podcasts, Deezer, Spotify, Google Podcasts, Podcast Addict et Podfriend."
     },
     "analytics": {
       "title": "Mesures d'audience intégrées",
-      "description": "Visualisez toutes les informations sur vos podcasts et épisodes suivant les standards du marché avec les directives IABv2. Toutes les données recueillies sont anonymisées, dans le respect du droit de vos auditeurs et conformément aux lois RGPD, CCPA et LGPD.",
+      "description": "Visualisez tous les chiffres d'audience de vos podcasts et épisodes suivant les standards du marché avec les directives IABv2. Toutes les données recueillies sont aggrégées et anonymisées, dans le respect du droit de vos auditeurs et conformément aux lois RGPD, CCPA et LGPD.",
       "illustrationAlt": "Une personne devant un graphique et une flèche montante. À la Stonks."
     },
     "value": {
       "title": "Valorisez votre travail",
-      "description": "Publiez votre podcast gratuitement ou monétisez le. Soyez rémunérés de poureboire, de dons value4value, ou intégrez automatiquement des publicités listen-to-click (en utilisant par exemple <0>la solution contextuelle d'Ad Aures</0>).",
+      "description": "Publiez votre podcast gratuitement ou monétisez-le. Récoltez des pourboires, des dons value4value, ou intégrez automatiquement des publicités listen-to-click (en utilisant par exemple <0>la solution contextuelle d'Ad Aures</0>).",
       "illustrationAlt": "Une bourse d'argent déversant des pièces."
     },
     "podcasting20": {
@@ -66,12 +66,12 @@
   },
   "openSource": {
     "title": "Libre, gratuit & open-source",
-    "weLoveOpenSource": "Nous adorons l'open-source !",
-    "description": "Castopod est sous licence <0>AGPL v3</0>, ouvert à <1>tout le monde</1>, dans <2>tous les sens du terme</2>, et destiné à le rester."
+    "weLoveOpenSource": "Nous sommes fans de l'open-source !",
+    "description": "Castopod est publié sous licence <0>AGPL v3</0>, ouvert à <1>tout le monde</1>, dans <2>tous les sens du terme</2>, et est destiné à le rester."
   },
   "community": {
     "title": "Rejoignez notre communauté",
-    "vision": "Notre but est de garder l'écosystème du podcast décentralisé pour garantir un terreau fertile pour l'innovation et la créativité.",
+    "vision": "Notre but est de garder l'écosystème du podcast décentralisé pour garantir un terreau fertile quant à l'innovation et la créativité.",
     "join": " Rejoignez notre communauté et partagez votre expérience et expertise !"
   },
   "sponsors": {
