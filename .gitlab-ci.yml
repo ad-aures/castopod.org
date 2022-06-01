@@ -29,7 +29,6 @@ build-production:
     url: https://castopod.org/
   script:
     - npm run build
-    - node ./fix-vite-assets.mjs
   artifacts:
     paths:
       - dist

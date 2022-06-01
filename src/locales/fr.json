@@ -65,9 +65,9 @@
     }
   },
   "openSource": {
-    "title": "Logiciel libre & open-source",
-    "weLoveOpenSource": "Nous raffolons de l'open-source !",
-    "description": "Castopod est sous licence <0>AGPL v3</0>, ouvert à <1>tout le monde</1>, dans <2>tous les sens du terme</2>, et destiné à rester ainsi."
+    "title": "Libre, gratuit & open-source",
+    "weLoveOpenSource": "Nous adorons l'open-source !",
+    "description": "Castopod est sous licence <0>AGPL v3</0>, ouvert à <1>tout le monde</1>, dans <2>tous les sens du terme</2>, et destiné à le rester."
   },
   "community": {
     "title": "Rejoignez notre communauté",
@@ -76,7 +76,7 @@
   },
   "sponsors": {
     "title": "Sponsorisé par",
-    "becomeASponsor": "Devenez un sponsor"
+    "becomeASponsor": "Devenez sponsor"
   },
   "footer": {
     "copyright": "Copyright © 2022 Ad Aures. Tous droits réservés.",

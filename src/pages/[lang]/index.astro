@@ -1,6 +1,7 @@
 ---
 import i18next from "i18next";
 import Home from "templates:Home";
+import "styles:index.css";
 
 export function getStaticPaths() {
   const languageRoutes = [];
@@ -21,4 +22,4 @@ const { lang } = Astro.params;
 i18next.changeLanguage(lang as string);
 ---
 
-<Home />
+<Home showBanner={i18next.language === "fr"} />

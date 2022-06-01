@@ -2,7 +2,7 @@
 import CastopodLogo from "assets:CastopodLogo";
 import CastopodIcon from "assets:CastopodIcon";
 import { Icon } from "astro-icon";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 
 import XElement from "astro-xelement";
 
@@ -28,7 +28,11 @@ const toggleMobileMenu = () => {
 <nav class="px-4 bg-pine-800 md:px-0">
   <div class="container flex justify-between h-20">
     <div class="inline-flex items-center gap-x-6">
-      <a href="https://castopod.org/" class="relative -bottom-2" title="Home">
+      <a
+        href={i18next.language === "en" ? "/" : `/${i18next.language}`}
+        class="relative -bottom-2"
+        title="Home"
+      >
         <CastopodIcon className="h-8 -mt-2 block md:hidden" />
         <CastopodLogo className="h-10 hidden md:block" />
       </a>
@@ -39,7 +43,9 @@ const toggleMobileMenu = () => {
           >{t("common.blog")}
         </a>
         <a
-          href="https://docs.castopod.org/"
+          href={i18next.language === "en"
+            ? "https://docs.castopod.org/"
+            : `https://docs.castopod.org/${i18next.language}`}
           class="hidden px-4 py-2 font-semibold md:block hover:underline decoration-pine-500 decoration-2"
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main Nav" } })}
@@ -101,7 +107,9 @@ const toggleMobileMenu = () => {
           >Blog
         </a>
         <a
-          href="https://docs.castopod.org/"
+          href={i18next.language === "en"
+            ? "https://docs.castopod.org/"
+            : `https://docs.castopod.org/${i18next.language}`}
           class="font-semibold md:block hover:underline decoration-pine-500 decoration-2"
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main Nav" } })}
