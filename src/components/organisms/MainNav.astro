@@ -3,6 +3,7 @@ import CastopodLogo from "assets:CastopodLogo";
 import CastopodIcon from "assets:CastopodIcon";
 import { Icon } from "astro-icon";
 import i18next, { t } from "i18next";
+import { localizePath } from "astro-i18next";
 
 import XElement from "astro-xelement";
 
@@ -28,11 +29,7 @@ const toggleMobileMenu = () => {
 <nav class="px-4 bg-pine-800 md:px-0">
   <div class="container flex justify-between h-20">
     <div class="inline-flex items-center gap-x-6">
-      <a
-        href={i18next.language === "en" ? "/" : `/${i18next.language}`}
-        class="relative -bottom-2"
-        title="Home"
-      >
+      <a href={localizePath("/")} class="relative -bottom-2" title="Home">
         <CastopodIcon className="h-8 -mt-2 block md:hidden" />
         <CastopodLogo className="h-10 hidden md:block" />
       </a>

@@ -6,6 +6,8 @@ import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
 import { SEO } from "astro-seo";
 import "../../styles/index.css";
 import i18next from "i18next";
+import { localizePath } from "astro-i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 ---
 
 <html lang={i18next.language} class="scroll-smooth">
@@ -13,6 +15,7 @@ import i18next from "i18next";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <HeadHrefLangs />
     <SEO
       title="Castopod by Ad Aures | Legal Notice"
       description="Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content."
@@ -26,7 +29,11 @@ import i18next from "i18next";
   <body class="overflow-x-hidden">
     <header class="py-12 bg-pine-800">
       <div class="container flex flex-col items-start px-4">
-        <a href="/" class="inline-flex gap-x-2" title="Back to home">
+        <a
+          href={localizePath("/")}
+          class="inline-flex gap-x-2"
+          title="Back to home"
+        >
           <Icon pack="ri" name="arrow-left-line" class="h-6 text-pine-100" />
           <CastopodLogo className="h-8" />
         </a>

@@ -13,11 +13,11 @@ export default defineConfig({
     tailwind(),
     sitemap(),
     astroI18next({
+      baseLanguage: "en",
       resourcesPath: "./src/locales/",
-      i18nextConfig: {
-        fallbackLng: ["en", "fr"],
-        supportedLngs: ["en", "fr"],
+      i18next: {
         debug: true,
+        supportedLngs: ["en", "fr"],
       },
     }),
   ],

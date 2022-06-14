@@ -10,6 +10,7 @@ import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
 import { SEO } from "astro-seo";
 import i18next, { t } from "i18next";
 import { Icon } from "astro-icon";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 const { showBanner = false } = Astro.props;
 ---
@@ -19,6 +20,7 @@ const { showBanner = false } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <HeadHrefLangs />
     <SEO
       title={t("seo.title")}
       description={t("seo.description")}
