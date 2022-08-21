@@ -11,15 +11,16 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
-    sitemap(),
-    astroI18next({
-      baseLanguage: "en",
-      resourcesPath: "./src/locales/",
-      i18next: {
-        debug: true,
-        supportedLngs: ["en", "fr"],
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en", // The `defaultLocale` value must present in `locales` keys
+          fr: "fr",
+        },
       },
     }),
+    astroI18next(),
   ],
   vite: {
     ssr: {
