@@ -6,7 +6,7 @@ let { className = "" } = Astro.props;
 
 <article class={"flex flex-col " + className}>
   <div class="h-80">
-    <slot name="illustration"></slot>
+    <slot name="illustration" />
   </div>
   <div class="flex flex-col items-center max-w-md md:items-start">
     <h2
@@ -17,10 +17,10 @@ let { className = "" } = Astro.props;
         name="checkbox-circle-fill"
         class="absolute h-6 top-1 -left-8"
       />
-      <slot name="title"></slot>
+      <slot name="title" />
     </h2>
     <p class="mt-2">
-      <slot name="paragraph"></slot>
+      <slot name="paragraph" />
     </p>
   </div>
 </article>

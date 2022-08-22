@@ -86,27 +86,29 @@ const sections = [
     <div
       class="grid w-full max-w-3xl grid-cols-1 gap-6 px-4 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-4"
     >
-      {sections.map((section) => (
-        <section class="flex flex-col gap-y-2">
-          <p class="text-sm font-bold tracking-wider uppercase font-display">
-            {section.title}
-          </p>
-          <nav class="flex flex-col gap-y-2">
-            {section.items.map((item) =>
-              item.type === "link" ? (
-                <a
-                  class="decoration-pine-500 decoration-2 hover:underline"
-                  href={item.link}
-                >
-                  {item.label}
-                </a>
-              ) : (
-                <small>{item.label}</small>
-              )
-            )}
-          </nav>
-        </section>
-      ))}
+      {
+        sections.map((section) => (
+          <section class="flex flex-col gap-y-2">
+            <p class="text-sm font-bold tracking-wider uppercase font-display">
+              {section.title}
+            </p>
+            <nav class="flex flex-col gap-y-2">
+              {section.items.map((item) =>
+                item.type === "link" ? (
+                  <a
+                    class="decoration-pine-500 decoration-2 hover:underline"
+                    href={item.link}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <small>{item.label}</small>
+                )
+              )}
+            </nav>
+          </section>
+        ))
+      }
     </div>
     <div class="flex flex-col items-start self-center max-w-sm mx-auto lg:mx-0">
       <AdauresLogo className="h-8" />
