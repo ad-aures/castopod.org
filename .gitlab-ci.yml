@@ -19,6 +19,9 @@ build:
   stage: build
   script:
     - npm run build
+  only:
+    variables:
+      - $CI_PROJECT_NAMESPACE == "adaures"
   except:
     - main
 
@@ -33,7 +36,10 @@ build-production:
     paths:
       - dist
   only:
-    - main
+    refs:
+      - main
+    variables:
+      - $CI_PROJECT_NAMESPACE == "adaures"
 
 deploy:
   stage: deploy
@@ -62,4 +68,7 @@ deploy:
     - rsync -avzuh -e "ssh -p $SSH_PORT" $SOURCE_FOLDER $USER@$HOST:$TEMP_DIRECTORY --progress
     - ssh $USER@$HOST -p $SSH_PORT "rsync -rtv $TEMP_DIRECTORY $DIRECTORY"
   only:
-    - main
+    refs:
+      - main
+    variables:
+      - $CI_PROJECT_NAMESPACE == "adaures"
