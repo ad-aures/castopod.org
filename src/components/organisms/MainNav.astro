@@ -37,7 +37,7 @@ const toggleMobileMenu = () => {
         <a
           href="https://blog.castopod.org/"
           class="hidden px-4 py-2 font-semibold md:block hover:underline decoration-pine-500 decoration-2"
-          >{t("common.blog")}
+          >{t("common:blog")}
         </a>
         <a
           href={i18next.language === "en"
@@ -46,7 +46,7 @@ const toggleMobileMenu = () => {
           class="hidden px-4 py-2 font-semibold md:block hover:underline decoration-pine-500 decoration-2"
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main Nav" } })}
-          >{t("common.docs")}
+          >{t("common:docs")}
         </a>
       </div>
     </div>
@@ -54,19 +54,19 @@ const toggleMobileMenu = () => {
       <a
         href="https://code.castopod.org/adaures/castopod"
         class="hidden md:block hover:text-white"
-        title={t("common.sourceCode")}
+        title={t("common:sourceCode")}
         ><Icon pack="ri" name="gitlab-fill" class="h-6" />
       </a>
       <a
         href="https://podlibre.social/@castopod"
         class="hidden md:block hover:text-white"
-        title={t("common.followOnFediverse")}
+        title={t("common:followOnFediverse")}
         ><Icon pack="ri" name="mastodon-fill" class="h-6" />
       </a>
       <a
         href="https://twitter.com/castopod"
         class="hidden md:block hover:text-white"
-        title={t("common.followOnTwitter")}
+        title={t("common:followOnTwitter")}
         ><Icon pack="ri" name="twitter-fill" class="h-6" />
       </a>
       <a
@@ -81,7 +81,7 @@ const toggleMobileMenu = () => {
             },
           })}
       >
-        {t("common.download")}
+        {t("common:download")}
       </a>
       <Button
         @click={toggleMobileMenu}
@@ -110,27 +110,27 @@ const toggleMobileMenu = () => {
           class="font-semibold md:block hover:underline decoration-pine-500 decoration-2"
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main Nav" } })}
-          >{t("common.documentation")}
+          >{t("common:documentation")}
         </a>
         <a
           href="https://code.castopod.org/adaures/castopod"
           class="inline-flex items-center mt-4 font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
           ><Icon pack="ri" name="gitlab-fill" class="h-6 text-pine-500" />{
-            t("common.sourceCode")
+            t("common:sourceCode")
           }
         </a>
         <a
           href="https://podlibre.social/@castopod"
           class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
           ><Icon pack="ri" name="mastodon-fill" class="h-6 text-pine-500" />{
-            t("common.followOnFediverse")
+            t("common:followOnFediverse")
           }
         </a>
         <a
           href="https://twitter.com/castopod"
           class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
           ><Icon pack="ri" name="twitter-fill" class="h-6 text-pine-500" />{
-            t("common.followOnTwitter")
+            t("common:followOnTwitter")
           }
         </a>
       </nav>

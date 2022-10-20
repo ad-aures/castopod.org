@@ -1,19 +1,4 @@
 {
-  "common": {
-    "download": "Télécharger",
-    "downloadCastopod": "Télécharger Castopod",
-    "getStarted": "Commencer",
-    "sourceCode": "Code source",
-    "blog": "Blog",
-    "docs": "Docs",
-    "documentation": "Documentation",
-    "followOnFediverse": "Suivez-nous sur le Fédivers",
-    "followOnTwitter": "Suivez-nous sur Twitter",
-    "joinDiscord": "Rejoignez notre serveur Discord",
-    "contactUs": "Contactez-nous",
-    "mirror": "Mirroir",
-    "learnMore": "En savoir plus"
-  },
   "seo": {
     "title": "Castopod par Ad Aures | Votre solution libre & gratuite d'hébergement de podcasts",
     "ogTitle": "Castopod | Votre solution libre & gratuite d'hébergement de podcasts",
@@ -54,7 +39,7 @@
     },
     "value": {
       "title": "Valorisez votre travail",
-      "description": "Publiez votre podcast gratuitement ou monétisez-le. Récoltez des pourboires, des dons value4value, ou intégrez automatiquement des publicités listen-to-click (en utilisant par exemple <0>la solution contextuelle d'Ad Aures</0>).",
+      "description": "Publiez votre podcast gratuitement ou monétisez-le. Gagnez de l'argent via des abonnements premiums, des micropaiements, des dons, ou intégrez automatiquement des publicités listen-to-click (en utilisant par exemple <0>la solution sans cookies d'Ad Aures</0>).",
       "illustrationAlt": "Une bourse d'argent déversant des pièces."
     },
     "podcasting20": {

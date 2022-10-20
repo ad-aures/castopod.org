@@ -11,10 +11,10 @@ import i18next, { t } from "i18next";
   <hr class="container border-pine-500" />
   <PinnedArticleBanner
     className="mt-8 max-w-xl mx-auto"
-    href="https://blog.castopod.org/castopod-v1-beta"
+    href="https://blog.castopod.org/castopod-v1"
   >
-    🎉 <strong>Beta is out!</strong> Brand new UI, color themes, video clips, PWA
-    support! This is a really long text to try out!
+    🎉 <strong>v1.0 is officially out!</strong> New roles, automatic database updates
+    and more about future developments!
   </PinnedArticleBanner>
 
   <div
@@ -49,7 +49,7 @@ import i18next, { t } from "i18next";
             name="download-cloud-2-fill"
             class="h-6 text-pine-500"
           />
-          {t("common.downloadCastopod")}
+          {t("common:downloadCastopod")}
         </a>
         <a
           href={i18next.language === "en"
@@ -59,7 +59,7 @@ import i18next, { t } from "i18next";
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main CTA" } })}
         >
-          {t("common.getStarted")}
+          {t("common:getStarted")}
           <Icon pack="ri" name="arrow-right-line" class="h-6 text-pine-300" />
         </a>
       </div>

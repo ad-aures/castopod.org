@@ -1,19 +1,4 @@
 {
-  "common": {
-    "download": "Download",
-    "downloadCastopod": "Download Castopod",
-    "getStarted": "Get started",
-    "sourceCode": "Source code",
-    "blog": "Blog",
-    "docs": "Docs",
-    "documentation": "Documentation",
-    "followOnFediverse": "Follow us on the Fediverse",
-    "followOnTwitter": "Follow us on Twitter",
-    "joinDiscord": "Join our Discord server",
-    "contactUs": "Contact us",
-    "mirror": "Mirror",
-    "learnMore": "Learn more"
-  },
   "seo": {
     "title": "Castopod by Ad Aures | Your Free & Open-source Podcast Host",
     "ogTitle": "Castopod | Your Free & Open-source Podcast Host",
@@ -54,7 +39,7 @@
     },
     "value": {
       "title": "Value your work",
-      "description": "Publish your podcast for free or monetize it. Get tips, get paid with value4value, or automatically embed listen‑to‑click ads (using <0>Ad Aures’ contextual solution</0> for example).",
+      "description": "Publish your podcast for free or monetize it. Get paid through premium subscriptions, micropayments, tips, or automatically embed listen‑to‑click ads (using <0>Ad Aures’ cookieless solution</0> for example).",
       "illustrationAlt": "A money bag dumping coins."
     },
     "podcasting20": {

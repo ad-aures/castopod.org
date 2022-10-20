@@ -182,12 +182,13 @@ import { Trans } from "astro-i18next/components";
         </h2>
         <p class="mt-2">
           <Trans i18nKey="features.value.description">
-            Publish your podcast for free or monetize it. Get tips, get paid
-            with value4value, or automatically embed listen‑to‑click ads (using
+            Publish your podcast for free or monetize it. Get paid through
+            premium subscriptions, micropayments, tips, or automatically embed
+            listen‑to‑click ads (using
             <a
               href="https://adaures.com/#listen-to-click"
               class="underline hover:no-underline decoration-pine-500 decoration-2"
-              >Ad Aures’ contextual solution
+              >Ad Aures’ cookieless solution
             </a>
             for example).
           </Trans>
@@ -254,7 +255,7 @@ import { Trans } from "astro-i18next/components";
           pack="ri"
           name="download-cloud-2-fill"
           class="h-6 text-pine-800 group-hover:text-pine-500"
-        />{t("common.downloadCastopod")}
+        />{t("common:downloadCastopod")}
       </a>
       <a
         href={i18next.language === "en"
@@ -264,7 +265,7 @@ import { Trans } from "astro-i18next/components";
         data-analytics={'"Documentation", ' +
           JSON.stringify({ props: { via: "Features CTA" } })}
       >
-        {t("common.getStarted")}
+        {t("common:getStarted")}
         <Icon pack="ri" name="arrow-right-line" class="h-6 text-pine-500" />
       </a>
     </div>
