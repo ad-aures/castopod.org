@@ -119,6 +119,10 @@ import CastopodMascot from "assets:CastopodMascot";
                 <a
                   href="https://docs.castopod.org/getting-started/docker.html"
                   class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                  data-analytics={'"Install", ' +
+                    JSON.stringify({
+                      props: { method: "Docker", via: "Getting Started" },
+                    })}
                 >
                   <Icon
                     pack="ri"
@@ -131,6 +135,10 @@ import CastopodMascot from "assets:CastopodMascot";
                 <a
                   href="https://install-app.yunohost.org/?app=castopod"
                   class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                  data-analytics={'"Install", ' +
+                    JSON.stringify({
+                      props: { method: "YunoHost", via: "Getting Started" },
+                    })}
                 >
                   <Icon
                     pack="ri"
@@ -143,6 +151,10 @@ import CastopodMascot from "assets:CastopodMascot";
                 <a
                   href="https://blog.castopod.org/install-castopod-on-cloud-panel-v2/"
                   class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                  data-analytics={'"Install", ' +
+                    JSON.stringify({
+                      props: { method: "CloudPanel", via: "Getting Started" },
+                    })}
                 >
                   <Icon
                     pack="ri"
@@ -155,6 +167,13 @@ import CastopodMascot from "assets:CastopodMascot";
                 <a
                   href="https://github.com/belykhk/castopod-ansible-playbook"
                   class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                  data-analytics={'"Install", ' +
+                    JSON.stringify({
+                      props: {
+                        method: "Ansible Playbook",
+                        via: "Getting Started",
+                      },
+                    })}
                 >
                   <Icon
                     pack="ri"
@@ -167,6 +186,10 @@ import CastopodMascot from "assets:CastopodMascot";
                 <a
                   href="https://docs.castopod.org/getting-started/install.html"
                   class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                  data-analytics={'"Install", ' +
+                    JSON.stringify({
+                      props: { method: "Manual", via: "Getting Started" },
+                    })}
                 >
                   <Icon
                     pack="ri"
@@ -184,24 +207,28 @@ import CastopodMascot from "assets:CastopodMascot";
           link="https://docs.castopod.org/"
           icon="book-read-fill"
           title={t("documentation")}
+          analyticsEvent="Documentation"
           >{t("documentationDescription")}
         </Card>
         <Card
           link="https://code.castopod.org/adaures/castopod/-/issues"
           icon="bug-fill"
           title={t("issueTracker")}
+          analyticsEvent="Issue Tracker"
           >{t("issueTrackerDescription")}
         </Card>
         <Card
           link="https://translate.castopod.org/"
           icon="translate-2"
           title={t("translate")}
+          analyticsEvent="Translate"
           >{t("translateDescription")}
         </Card>
         <Card
           link="https://castopod.org/chat"
           icon="chat-smile-2-fill"
           title={t("chat")}
+          analyticsEvent="Chat"
         >
           {t("chatDescription")}
         </Card>
