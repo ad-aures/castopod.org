@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Castopod par Ad Aures | Votre solution libre & gratuite d'hébergement de podcasts",
+    "title": "Votre solution libre & gratuite d'hébergement de podcasts",
     "ogTitle": "Castopod | Votre solution libre & gratuite d'hébergement de podcasts",
     "description": "Castopod est une solution d'hébergement libre & gratuite concue pour les podcasteurs. Échangez et intéragissez avec votre public tout en gardant le contrôle sur votre contenu.",
     "ogImageAlt": "La mascotte Castopod disant bonjour et tenant un navigateur montrant Castopod."
@@ -62,16 +62,5 @@
   "sponsors": {
     "title": "Sponsorisé par",
     "becomeASponsor": "Devenez sponsor"
-  },
-  "footer": {
-    "copyright": "Copyright © 2022 Ad Aures. Tous droits réservés.",
-    "links": "Liens",
-    "community": "Communauté",
-    "aboutAdAures": "À propos d'Ad Aures",
-    "legal": "Légal",
-    "issues": "Tickets",
-    "website": "Site web",
-    "legalNotice": "Mention légale",
-    "cookieNotice": "Ce site web ne contient aucun cookie !"
   }
 }

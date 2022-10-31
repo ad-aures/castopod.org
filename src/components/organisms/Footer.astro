@@ -6,7 +6,7 @@ import { LanguageSelector } from "astro-i18next/components";
 
 const sections = [
   {
-    title: t("footer.links"),
+    title: t("common:footer.links"),
     items: [
       {
         type: "link",
@@ -16,7 +16,7 @@ const sections = [
       {
         type: "link",
         link: "https://code.castopod.org/adaures/castopod/issues",
-        label: t("footer.issues"),
+        label: t("common:footer.issues"),
       },
       {
         type: "link",
@@ -36,7 +36,7 @@ const sections = [
     ],
   },
   {
-    title: t("footer.community"),
+    title: t("common:footer.community"),
     items: [
       {
         type: "link",
@@ -53,9 +53,13 @@ const sections = [
     ],
   },
   {
-    title: t("footer.aboutAdAures"),
+    title: t("common:footer.aboutAdAures"),
     items: [
-      { type: "link", link: "https://adaures.com", label: t("footer.website") },
+      {
+        type: "link",
+        link: "https://adaures.com",
+        label: t("common:footer.website"),
+      },
       { type: "link", link: "https://twitter.com/ad_aures", label: "Twitter" },
       {
         type: "link",
@@ -65,16 +69,16 @@ const sections = [
     ],
   },
   {
-    title: t("footer.legal"),
+    title: t("common:footer.legal"),
     items: [
       {
         type: "link",
         link: localizePath("/legal"),
-        label: t("footer.legalNotice"),
+        label: t("common:footer.legalNotice"),
       },
       {
         type: "notice",
-        label: `🍪 ${t("footer.cookieNotice")}`,
+        label: `🍪 ${t("common:footer.cookieNotice")}`,
       },
     ],
   },
@@ -112,7 +116,7 @@ const sections = [
     </div>
     <div class="flex flex-col items-start self-center max-w-sm mx-auto lg:mx-0">
       <AdauresLogo className="h-8" />
-      <small>{t("footer.copyright")}</small>
+      <small>{t("common:footer.copyright")}</small>
       <LanguageSelector
         showFlag={true}
         class="px-2 py-1 appearance-none bg-pine-900"

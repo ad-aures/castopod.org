@@ -7,7 +7,7 @@ const config: AstroI18nextConfig = {
     // debug is convenient during development to check for missing keys
     debug: true,
     initImmediate: false,
-    ns: ["common", "home"],
+    ns: ["common", "home", "getting-started"],
     defaultNS: ["common"],
     backend: {
       loadPath: "./src/locales/{{lng}}/{{ns}}.json",

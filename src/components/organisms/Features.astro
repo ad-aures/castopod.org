@@ -15,6 +15,7 @@ import StraightPath from "assets:DashedPath/StraightPath";
 import { Icon } from "astro-icon";
 import i18next, { t } from "i18next";
 import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next/index";
 ---
 
 <section id="features" class="container py-24">
@@ -258,12 +259,8 @@ import { Trans } from "astro-i18next/components";
         />{t("common:downloadCastopod")}
       </a>
       <a
-        href={i18next.language === "en"
-          ? "https://docs.castopod.org/"
-          : `https://docs.castopod.org/${i18next.language}`}
+        href={localizePath("/getting-started")}
         class="inline-flex items-center px-4 py-2 font-semibold text-black bg-white border-2 rounded-full border-pine-500 gap-x-2 hover:bg-pine-100 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
-        data-analytics={'"Documentation", ' +
-          JSON.stringify({ props: { via: "Features CTA" } })}
       >
         {t("common:getStarted")}
         <Icon pack="ri" name="arrow-right-line" class="h-6 text-pine-500" />

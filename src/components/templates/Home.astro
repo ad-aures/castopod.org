@@ -22,7 +22,7 @@ const { showBanner = false } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <HeadHrefLangs />
     <SEO
-      title={t("seo.title")}
+      title={t("common:siteTitle", { pageName: t("seo.title") })}
       description={t("seo.description")}
       canonical={i18next.language === "en"
         ? "https://castopod.org/"

@@ -1,1 +1,5 @@
-@import "fonts.css";
+@import url("fonts.css");
+
+.rounded-conditional-xl {
+  border-radius: max(0px, min(0.75rem, calc(999900vw - 9999rem - 999900%)));
+}

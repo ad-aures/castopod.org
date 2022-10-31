@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon";
+
+let { link, icon, title, ...attributes } = Astro.props;
+---
+
+<li {...attributes}>
+  <a
+    href={link}
+    class="relative flex flex-col w-full h-full gap-4 px-4 pt-4 pb-10 overflow-hidden transition bg-white border-4 border-transparent shadow-xl hover:shadow focus:shadow focus:bg-pine-100 group focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75 hover:bg-pine-100 rounded-conditional-xl hover:border-pine-500"
+  >
+    <h2 class="text-xl font-semibold text-pine-800 font-display">
+      <Icon
+        pack="ri"
+        name={icon}
+        class="h-6 transition text-pine-300 group-hover:text-pine-500 group-focus:text-pine-500"
+      />
+      <Icon
+        pack="ri"
+        name={icon}
+        class="absolute h-48 transition -right-1/4 group-hover:-translate-x-2 group-hover:translate-y-2 group-focus:-translate-x-2 group-focus:translate-y-2 -top-1/4 text-pine-500 opacity-5"
+      />
+      {title}
+    </h2>
+    <p class="text-gray-500">
+      <slot />
+    </p>
+    <Icon
+      pack="ri"
+      name="arrow-right-line"
+      class="absolute h-6 -ml-2 transition opacity-50 text-pine-800 bottom-2 right-4 group-hover:opacity-100 group-hover:translate-x-1 group-focus:opacity-100 group-focus:translate-x-1"
+    />
+  </a>
+</li>

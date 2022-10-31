@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Castopod by Ad Aures | Your Free & Open-source Podcast Host",
+    "title": "Your Free & Open-source Podcast Host",
     "ogTitle": "Castopod | Your Free & Open-source Podcast Host",
     "description": "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
     "ogImageAlt": "Castopod mascot waving hello and holding a browser showcasing Castopod."
@@ -62,16 +62,5 @@
   "sponsors": {
     "title": "Sponsored by",
     "becomeASponsor": "Become a sponsor"
-  },
-  "footer": {
-    "copyright": "Copyright © 2022 Ad Aures. All rights reserved.",
-    "links": "Links",
-    "community": "Community",
-    "aboutAdAures": "About Ad Aures",
-    "legal": "Legal",
-    "issues": "Issues",
-    "website": "Website",
-    "legalNotice": "Legal notice",
-    "cookieNotice": "This website does not have any cookies!"
   }
 }

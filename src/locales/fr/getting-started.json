@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "Commencer",
+    "description": "Vous ne savez pas où commencer avec Castopod ? Trouvez ici toutes les ressources : téléchargez et installez Castopod, lisez la documentation, soumettez un rapport de bug ou une nouvelle fonctionnalité, traduisez Castopod dans votre langue, et discutez avec la communauté !"
+  },
+  "pageTitle": "Commencer",
+  "download": "Téléchargez",
+  "requirements": "PHP 8.1 et MySQL 5.7 ou MariaDB version 10.3 ou supérieur sont requis. ",
+  "downloadCastopodWithVersion": "Télécharger Castopod {{version}}",
+  "releases": "Versions",
+  "source": "Code source",
+  "install": "Installez",
+  "installDescription": "Vous pouvez facilement auto-héberger Castopod sur votre propre serveur en utilisant l'une des méthodes suivantes :",
+  "manual": "Manuellement",
+  "documentation": "Documentation",
+  "documentationDescription": "Pour plus d'information, lisez la documentation afin de comprendre comment fonctionne Castopod.",
+  "issueTracker": "Bugs & fonctionnalités",
+  "issueTrackerDescription": "Vous avez trouvé un bug ou besoin d'une fonctionnalité ? Rendez-vous sur notre gestionnaire de tickets.",
+  "translate": "Traduction",
+  "translateDescription": "Ramenez Castopod dans votre région du monde en le traduisant dans votre langue !",
+  "chat": "Messagerie communautaire",
+  "chatDescription": "Rencontrez d'autres podcasteurs, demandez de l'aide, ou contactez les développeurs."
+}

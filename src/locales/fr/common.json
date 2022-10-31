@@ -1,4 +1,6 @@
 {
+  "siteTitle": "Castopod par Ad Aures | {{pageName}}",
+  "backToHome": "Retour à l'accueil",
   "download": "Télécharger",
   "downloadCastopod": "Télécharger Castopod",
   "getStarted": "Commencer",
@@ -11,5 +13,16 @@
   "joinDiscord": "Rejoignez notre serveur Discord",
   "contactUs": "Contactez-nous",
   "mirror": "Mirroir",
-  "learnMore": "En savoir plus"
+  "learnMore": "En savoir plus",
+  "footer": {
+    "copyright": "Copyright © 2022 Ad Aures. Tous droits réservés.",
+    "links": "Liens",
+    "community": "Communauté",
+    "aboutAdAures": "À propos d'Ad Aures",
+    "legal": "Légal",
+    "issues": "Tickets",
+    "website": "Site web",
+    "legalNotice": "Mention légale",
+    "cookieNotice": "Ce site web ne contient aucun cookie !"
+  }
 }
