@@ -1,19 +1,18 @@
 import { AstroI18nextConfig } from "astro-i18next";
 
 const config: AstroI18nextConfig = {
-  defaultLanguage: "en",
-  supportedLanguages: ["en", "fr"],
-  i18next: {
-    // debug is convenient during development to check for missing keys
+  defaultLocale: "en",
+  locales: ["en", "fr"],
+  namespaces: ["common", "home", "getting-started"],
+  defaultNamespace: "common",
+  i18nextServer: {
     debug: true,
-    initImmediate: false,
-    ns: ["common", "home", "getting-started"],
-    defaultNS: ["common"],
-    backend: {
-      loadPath: "./src/locales/{{lng}}/{{ns}}.json",
+  },
+  routes: {
+    fr: {
+      "getting-started": "commencer",
     },
   },
-  i18nextPlugins: { fsBackend: "i18next-fs-backend" },
 };
 
 export default config;
