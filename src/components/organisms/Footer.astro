@@ -10,27 +10,27 @@ const sections = [
     items: [
       {
         type: "link",
-        link: "mailto:hello@castopod.org",
+        href: "mailto:hello@castopod.org",
         label: t("common:contactUs"),
       },
       {
         type: "link",
-        link: "https://code.castopod.org/adaures/castopod/issues",
+        href: "https://code.castopod.org/adaures/castopod/issues",
         label: t("common:footer.issues"),
       },
       {
         type: "link",
-        link: "https://code.castopod.org/adaures/castopod/",
+        href: "https://code.castopod.org/adaures/castopod/",
         label: t("common:sourceCode"),
       },
       {
         type: "link",
-        link: "https://github.com/ad-aures/castopod",
+        href: "https://github.com/ad-aures/castopod",
         label: `Github [${t("common:mirror").toLowerCase()}]`,
       },
       {
         type: "link",
-        link: "https://blog.castopod.org/",
+        href: "https://blog.castopod.org/",
         label: t("common:blog"),
       },
     ],
@@ -40,14 +40,15 @@ const sections = [
     items: [
       {
         type: "link",
-        link: "https://podlibre.social/@castopod",
+        href: "https://podlibre.social/@castopod",
+        rel: "me",
         label: "Mastodon",
       },
-      { type: "link", link: "https://twitter.com/castopod", label: "Twitter" },
-      { type: "link", link: "https://castopod.org/discord", label: "Discord" },
+      { type: "link", href: "https://twitter.com/castopod", label: "Twitter" },
+      { type: "link", href: "https://castopod.org/discord", label: "Discord" },
       {
         type: "link",
-        link: "https://opencollective.com/castopod",
+        href: "https://opencollective.com/castopod",
         label: "Open collective",
       },
     ],
@@ -57,13 +58,13 @@ const sections = [
     items: [
       {
         type: "link",
-        link: "https://adaures.com",
+        href: "https://adaures.com",
         label: t("common:footer.website"),
       },
-      { type: "link", link: "https://twitter.com/ad_aures", label: "Twitter" },
+      { type: "link", href: "https://twitter.com/ad_aures", label: "Twitter" },
       {
         type: "link",
-        link: "https://linkedin.com/company/ad-aures",
+        href: "https://linkedin.com/company/ad-aures",
         label: "LinkedIn",
       },
     ],
@@ -73,7 +74,7 @@ const sections = [
     items: [
       {
         type: "link",
-        link: localizePath("/legal"),
+        href: localizePath("/legal"),
         label: t("common:footer.legalNotice"),
       },
       {
@@ -97,18 +98,22 @@ const sections = [
               {section.title}
             </p>
             <nav class="flex flex-col gap-y-2">
-              {section.items.map((item) =>
-                item.type === "link" ? (
+              {section.items.map((item) => {
+                const itemType = item.type;
+                const itemLabel = item.label;
+                delete item.label;
+                delete item.type;
+                return itemType === "link" ? (
                   <a
                     class="decoration-pine-500 decoration-2 hover:underline"
-                    href={item.link}
+                    {...item}
                   >
-                    {item.label}
+                    {itemLabel}
                   </a>
                 ) : (
-                  <small>{item.label}</small>
-                )
-              )}
+                  <small>{itemLabel}</small>
+                );
+              })}
             </nav>
           </section>
         ))
