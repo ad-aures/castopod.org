@@ -5,6 +5,11 @@
     "description": "Castopod is a free and open-source hosting platform made for podcasters. Engage and interact with your audience whilst keeping control over your content.",
     "ogImageAlt": "Castopod mascot waving hello and holding a browser showcasing Castopod."
   },
+  "banner": {
+    "new": "New",
+    "title": "Discover our turnkey Castopod offers and host your podcasts with ease!",
+    "cta": "See plans"
+  },
   "header": {
     "displayTitle": "The free and open-source solution to your podcasting 2.0 journey",
     "description": "Self-host your podcasts with ease, keep control over what you create and talk to your audience without any middleman. Your podcast and your audience belong to you and you only."

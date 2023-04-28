@@ -97,8 +97,14 @@ const toggleMobileMenu = () => {
       </Button>
       <nav
         id="mobile-navigation"
-        class="fixed left-0 z-50 flex flex-col hidden w-screen h-screen px-8 py-12 text-xl bg-white gap-y-2 top-20 text-pine-900"
+        class="fixed top-0 left-0 z-50 flex flex-col hidden w-screen h-screen px-8 py-12 text-xl bg-white gap-y-2 text-pine-900"
       >
+      <Button
+          @click={toggleMobileMenu}
+          class="absolute top-0 right-0 p-4 hover:bg-pine-100"
+          title="Toggle menu"
+          ><Icon id="menu-open" pack="ri" name="close-fill" class="h-6" />
+        </Button>
         <a
           href="https://blog.castopod.org/"
           class="font-semibold md:block hover:underline decoration-pine-500 decoration-2"

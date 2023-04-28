@@ -16,33 +16,33 @@
     "i18n:generate": "astro-i18next generate"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^1.1.0",
-    "@astrojs/tailwind": "^3.0.1",
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
+    "@astrojs/sitemap": "^1.2.2",
+    "@astrojs/tailwind": "^3.1.1",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
-    "astro": "^2.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "astro": "^2.3.2",
     "astro-xelement": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-n": "^15.7.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "prettier": "2.8.4",
+    "lint-staged": "^13.2.2",
+    "prettier": "2.8.8",
     "prettier-plugin-astro": "^0.8.0",
-    "stylelint": "^15.2.0",
-    "stylelint-config-standard": "^30.0.1",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
     "stylelint-prettier": "^3.0.0",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5"
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4"
   },
   "config": {
     "commitizen": {
@@ -50,10 +50,10 @@
     }
   },
   "dependencies": {
-    "i18next": "^22.4.10",
-    "astro-i18next": "1.0.0-beta.18",
+    "i18next": "^22.4.15",
+    "astro-i18next": "1.0.0-beta.21",
     "astro-icon": "^0.8.0",
-    "astro-seo": "^0.7.1"
+    "astro-seo": "^0.7.2"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
