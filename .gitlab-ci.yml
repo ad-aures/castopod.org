@@ -5,20 +5,26 @@ stages:
   - deploy
 
 before_script:
-  - npm ci
+  - corepack enable
+  - corepack prepare pnpm@latest-8 --activate
+  - pnpm config set store-dir .pnpm-store
+  - pnpm install
   # Generate .env file
   - chmod +x ./scripts/generate_env.sh
   - ./scripts/generate_env.sh
 
 cache:
+  key:
+    files:
+      - pnpm-lock.yaml
   paths:
-    - node_modules/
+    - .pnpm-store
 
 # This job only serves for validating that the app builds correctly on all non deployment branches
 build:
   stage: build
   script:
-    - npm run build
+    - pnpm run build
   only:
     variables:
       - $CI_PROJECT_NAMESPACE == "adaures"
@@ -31,7 +37,7 @@ build-production:
     name: production
     url: https://castopod.org/
   script:
-    - npm run build
+    - pnpm run build
   artifacts:
     paths:
       - dist
