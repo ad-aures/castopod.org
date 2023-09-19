@@ -4,6 +4,7 @@ import CastopodAdminScreen from "images:castopod-admin-screen.webp";
 import NotificationPulse from "atoms:NotificationPulse";
 import XElement from "astro-xelement";
 import { t } from "i18next";
+import { Image } from "astro:assets";
 
 const { button: Button } = XElement;
 const activeClass = " bg-gray-200 font-semibold";
@@ -74,7 +75,7 @@ function setActive(event: MouseEvent) {
     </div>
   </nav>
 
-  <img
+  <Image
     src={CastopodActivityScreen}
     id="website"
     alt={t("browserPreview.websiteImageAlt")}
@@ -82,7 +83,7 @@ function setActive(event: MouseEvent) {
     loading="lazy"
   />
 
-  <img
+  <Image
     src={CastopodAdminScreen}
     id="admin"
     alt={t("browserPreview.adminImageAlt")}

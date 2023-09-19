@@ -16,6 +16,7 @@ import { Icon } from "astro-icon";
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
 import { localizePath } from "astro-i18next";
+import { Image } from "astro:assets";
 ---
 
 <section id="features" class="container py-24">
@@ -34,7 +35,7 @@ import { localizePath } from "astro-i18next";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-1 lg:items-start"
     >
-      <img
+      <Image
         src={FediverseIllustration}
         alt={t("features.fediverse.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-full -z-10 lg:inset-y-0 h-96 aspect-square"
@@ -69,7 +70,7 @@ import { localizePath } from "astro-i18next";
     <article
       class="relative flex flex-col items-center lg:flex-row lg:col-start-2 lg:row-start-2 lg:items-start"
     >
-      <img
+      <Image
         src={VideoClipsIllustration}
         alt={t("features.marketing.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96 aspect-square"
@@ -100,7 +101,7 @@ import { localizePath } from "astro-i18next";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-3 lg:items-start"
     >
-      <img
+      <Image
         src={BroadcastIllustration}
         alt={t("features.broadcast.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96 aspect-square"
@@ -131,7 +132,7 @@ import { localizePath } from "astro-i18next";
     <article
       class="relative flex flex-col items-center lg:flex-row lg:col-start-2 lg:row-start-4 lg:items-start"
     >
-      <img
+      <Image
         src={AnalyticsIllustration}
         alt={t("features.analytics.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-left-full -z-10 lg:inset-y-0 h-96 aspect-square"
@@ -162,7 +163,7 @@ import { localizePath } from "astro-i18next";
     <article
       class="relative flex flex-col items-center lg:flex-row-reverse lg:col-start-1 lg:row-start-5 lg:items-start"
     >
-      <img
+      <Image
         src={ValueIllustration}
         alt={t("features.value.illustrationAlt")}
         class="flex-1 w-full max-w-md m-auto lg:absolute lg:-right-3/4 -z-10 lg:inset-y-0 h-96 aspect-square"
