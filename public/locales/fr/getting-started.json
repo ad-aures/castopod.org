@@ -4,6 +4,11 @@
     "description": "Vous ne savez pas où commencer avec Castopod ? Trouvez ici toutes les ressources : téléchargez et installez Castopod, lisez la documentation, soumettez un rapport de bug ou une nouvelle fonctionnalité, traduisez Castopod dans votre langue, et discutez avec la communauté !"
   },
   "pageTitle": "Commencer",
+  "turnkey": {
+    "title": "Offres clés en main",
+    "description": "Lancez votre propre instance Castopod en seulement <0>5 minutes</0> !<1>Aucune maintenance, sans engagement.",
+    "cta": "Essayez gratuitement"
+  },
   "download": "Téléchargez",
   "requirements": "PHP 8.1 et MySQL 5.7 ou MariaDB version 10.3 ou supérieur sont requis. ",
   "downloadCastopodWithVersion": "Télécharger Castopod {{version}}",

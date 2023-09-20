@@ -4,6 +4,11 @@
     "description": "Don't know where to start with Castopod? Find all of the resources here: download and install Castopod, read the documentation, file new issues or request a feature, translate Castopod in your language, and come chat with the community!"
   },
   "pageTitle": "Getting started",
+  "turnkey": {
+    "title": "Turnkey offers",
+    "description": "Get your own Castopod instance in just <0>5 minutes</0>!<1>No maintenance, no strings attached.",
+    "cta": "Get started for free"
+  },
   "download": "Download",
   "requirements": "Requires PHP 8.1 and MySQL 5.7 or MariaDB version 10.3 or greater. ",
   "downloadCastopodWithVersion": "Download Castopod {{version}}",

@@ -20,6 +20,9 @@
         "terminal.integrated.defaultProfile.linux": "bash",
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[astro]": {
+          "editor.defaultFormatter": "astro-build.astro-vscode"
+        },
         "css.validate": false,
         "color-highlight.markerType": "dot-before"
       },
