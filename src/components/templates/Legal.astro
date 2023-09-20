@@ -1,6 +1,6 @@
 ---
 import Footer from "organisms:Footer";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import CastopodLogo from "assets:CastopodLogo";
 import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
 import { SEO } from "astro-seo";
@@ -35,7 +35,7 @@ import { HeadHrefLangs } from "astro-i18next/components";
           class="inline-flex gap-x-2"
           title="Back to home"
         >
-          <Icon pack="ri" name="arrow-left-line" class="h-6 text-pine-100" />
+          <Icon name="ri:arrow-left-line" class="text-2xl text-pine-100" />
           <CastopodLogo className="h-8" />
         </a>
         <h1
@@ -163,7 +163,7 @@ import { HeadHrefLangs } from "astro-i18next/components";
             rel="nofollow noopener"
           >
             (CC0)
-            <Icon pack="ri" name="creative-commons-zero-fill" class="h-4" />
+            <Icon name="ri:creative-commons-zero-fill" />
           </a>.
         </p>
         <h2>Limitation of liability</h2>

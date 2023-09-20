@@ -9,7 +9,7 @@ import BrowserPreview from "organisms:BrowserPreview";
 import AnalyticsEventsScript from "assets:AnalyticsEventsScript";
 import { SEO } from "astro-seo";
 import i18next, { t } from "i18next";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { HeadHrefLangs } from "astro-i18next/components";
 ---
 
@@ -78,9 +78,8 @@ import { HeadHrefLangs } from "astro-i18next/components";
         >
           {t('banner.cta')}
           <Icon
-            pack="ri"
-            name="arrow-right-line"
-            class="h-4 text-pine-800"
+            name="ri:arrow-right-line"
+            class="text-pine-800"
           />
         </a>
       </div>

@@ -1,11 +1,11 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { t } from "i18next";
 ---
 
 <section
   id="community"
-  class="max-w-5xl px-12 py-20 mx-auto -mt-40 text-center shadow-2xl text-pine-100 bg-pine-800 rounded-3xl"
+  class="max-w-5xl px-12 py-20 mx-auto -mt-40 text-center shadow-2xl text-pine-100 bg-pine-800 rounded-conditional-3xl"
 >
   <div class="max-w-2xl mx-auto">
     <h2 class="text-4xl font-bold font-display">{t("community.title")}</h2>
@@ -21,19 +21,19 @@ import { t } from "i18next";
         class="hover:text-white"
         title={t("common:followOnFediverse")}
         rel="me"
-        ><Icon pack="ri" name="mastodon-fill" class="h-10" />
+        ><Icon name="ri:mastodon-fill" class="text-4xl" />
       </a>
       <a
         href="https://twitter.com/castopod"
         class="hover:text-white"
         title={t("common:followOnTwitter")}
-        ><Icon pack="ri" name="twitter-fill" class="h-10" />
+        ><Icon name="ri:twitter-x-fill" class="text-4xl" />
       </a>
       <a
         href="https://castopod.org/discord"
         class="hover:text-white"
         title={t("common:joinDiscord")}
-        ><Icon pack="ri" name="discord-fill" class="h-10" />
+        ><Icon name="ri:discord-fill" class="text-4xl" />
       </a>
     </div>
   </div>

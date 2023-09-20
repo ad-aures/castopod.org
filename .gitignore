@@ -1,6 +1,9 @@
 # build output
 dist
 
+# dev code gen
+.astro
+
 # dependencies
 node_modules/
 .pnpm-store/

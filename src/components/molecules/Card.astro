@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 let { link, icon, title, analyticsEvent, ...attributes } = Astro.props;
 ---
@@ -15,14 +15,12 @@ let { link, icon, title, analyticsEvent, ...attributes } = Astro.props;
   >
     <h2 class="text-xl font-semibold text-pine-800 font-display">
       <Icon
-        pack="ri"
         name={icon}
-        class="h-6 transition text-pine-300 group-hover:text-pine-500 group-focus:text-pine-500"
+        class="text-2xl transition text-pine-300 group-hover:text-pine-500 group-focus:text-pine-500"
       />
       <Icon
-        pack="ri"
         name={icon}
-        class="absolute h-48 transition -right-1/4 group-hover:-translate-x-2 group-hover:translate-y-2 group-focus:-translate-x-2 group-focus:translate-y-2 -top-1/4 text-pine-500 opacity-5"
+        class="absolute text-[12rem] transition -right-1/4 group-hover:-translate-x-2 group-hover:translate-y-2 group-focus:-translate-x-2 group-focus:translate-y-2 -top-1/4 text-pine-500 opacity-5"
       />
       {title}
     </h2>
@@ -30,9 +28,8 @@ let { link, icon, title, analyticsEvent, ...attributes } = Astro.props;
       <slot />
     </p>
     <Icon
-      pack="ri"
-      name="arrow-right-line"
-      class="absolute h-6 -ml-2 transition opacity-50 text-pine-800 bottom-2 right-4 group-hover:opacity-100 group-hover:translate-x-1 group-focus:opacity-100 group-focus:translate-x-1"
+      name="ri:arrow-right-line"
+      class="absolute -ml-2 text-2xl transition opacity-50 text-pine-800 bottom-2 right-4 group-hover:opacity-100 group-hover:translate-x-1 group-focus:opacity-100 group-focus:translate-x-1"
     />
   </a>
 </li>

@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { t } from "i18next";
 
 export interface Props {
@@ -23,6 +23,6 @@ const { href, className } = Astro.props;
     class="inline-flex items-center flex-shrink-0 font-semibold gap-x-1 group-hover:underline decoration-pine-500 decoration-2"
   >
     {t("common:learnMore")}
-    <Icon pack="ri" name="arrow-right-line" class="h-6" />
+    <Icon name="ri:arrow-right-line" class="text-2xl" />
   </span>
 </a>

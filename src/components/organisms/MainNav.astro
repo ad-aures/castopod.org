@@ -1,7 +1,7 @@
 ---
 import CastopodLogo from "assets:CastopodLogo";
 import CastopodIcon from "assets:CastopodIcon";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
 
@@ -55,20 +55,20 @@ const toggleMobileMenu = () => {
         href="https://code.castopod.org/adaures/castopod"
         class="hidden md:block hover:text-white"
         title={t("common:sourceCode")}
-        ><Icon pack="ri" name="gitlab-fill" class="h-6" />
+        ><Icon name="ri:code-s-slash-fill" class="text-2xl" />
       </a>
       <a
         href="https://podlibre.social/@Castopod"
         rel="me"
         class="hidden md:block hover:text-white"
         title={t("common:followOnFediverse")}
-        ><Icon pack="ri" name="mastodon-fill" class="h-6" />
+        ><Icon name="ri:mastodon-fill" class="text-2xl" />
       </a>
       <a
         href="https://twitter.com/castopod"
         class="hidden md:block hover:text-white"
         title={t("common:followOnTwitter")}
-        ><Icon pack="ri" name="twitter-fill" class="h-6" />
+        ><Icon name="ri:twitter-x-fill" class="text-2xl" />
       </a>
       <a
         href={import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
@@ -88,11 +88,12 @@ const toggleMobileMenu = () => {
         @click={toggleMobileMenu}
         class="p-2 md:hidden"
         title="Toggle menu"
-        ><Icon id="menu-open" pack="ri" name="menu-2-fill" class="h-6" /><Icon
+        >
+        <Icon id="menu-open" name="ri:menu-2-fill" class="h-6" />
+        <Icon
           id="menu-close"
-          pack="ri"
-          name="close-fill"
-          class="hidden h-6"
+          name="ri:close-fill"
+          class="hidden text-2xl"
         />
       </Button>
       <nav
@@ -103,7 +104,7 @@ const toggleMobileMenu = () => {
           @click={toggleMobileMenu}
           class="absolute top-0 right-0 p-4 hover:bg-pine-100"
           title="Toggle menu"
-          ><Icon id="menu-open" pack="ri" name="close-fill" class="h-6" />
+          ><Icon id="menu-open" name="ri:close-fill" class="text-2xl" />
         </Button>
         <a
           href="https://blog.castopod.org/"
@@ -122,7 +123,7 @@ const toggleMobileMenu = () => {
         <a
           href="https://code.castopod.org/adaures/castopod"
           class="inline-flex items-center mt-4 font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
-          ><Icon pack="ri" name="gitlab-fill" class="h-6 text-pine-500" />{
+          ><Icon name="ri:code-s-slash-fill" class="text-2xl text-pine-500" />{
             t("common:sourceCode")
           }
         </a>
@@ -130,14 +131,14 @@ const toggleMobileMenu = () => {
           href="https://podlibre.social/@Castopod"
           rel="me"
           class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
-          ><Icon pack="ri" name="mastodon-fill" class="h-6 text-pine-500" />{
+          ><Icon name="ri:mastodon-fill" class="text-2xl text-pine-500" />{
             t("common:followOnFediverse")
           }
         </a>
         <a
           href="https://twitter.com/castopod"
           class="inline-flex items-center font-semibold gap-x-2 hover:underline decoration-pine-500 decoration-2"
-          ><Icon pack="ri" name="twitter-fill" class="h-6 text-pine-500" />{
+          ><Icon name="ri:twitter-x-fill" class="text-2xl text-pine-500" />{
             t("common:followOnTwitter")
           }
         </a>

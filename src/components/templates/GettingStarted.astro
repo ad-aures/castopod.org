@@ -2,7 +2,7 @@
 import CastopodLogo from "assets:CastopodLogo";
 import { HeadHrefLangs } from "astro-i18next/components";
 import { localizePath } from "astro-i18next";
-import Icon from "astro-icon";
+import {Icon} from "astro-icon/components";
 import { SEO } from "astro-seo";
 import i18next, { t } from "i18next";
 import Footer from "organisms:Footer";
@@ -36,7 +36,7 @@ import CastopodMascot from "assets:CastopodMascot";
           class="inline-flex gap-x-2"
           title={t("common:backToHome")}
         >
-          <Icon pack="ri" name="arrow-left-line" class="h-6 text-pine-100" />
+          <Icon name="ri:arrow-left-line" class="text-2xl text-pine-100" />
           <CastopodLogo className="h-8" />
         </a>
         <h1
@@ -54,11 +54,8 @@ import CastopodMascot from "assets:CastopodMascot";
         >
           <div class="flex flex-col">
             <h2 class="text-xl font-semibold text-pine-800 font-display">
-              <Icon
-                pack="ri"
-                name="inbox-archive-fill"
-                class="h-6 text-pine-300"
-              /><span>1. {t("download")}</span>
+              <Icon name="ri:inbox-archive-fill" class="text-2xl text-pine-300"/>
+              <span>1. {t("download")}</span>
             </h2>
             <p class="max-w-sm text-sm text-gray-500">
               {t("requirements")}
@@ -76,11 +73,7 @@ import CastopodMascot from "assets:CastopodMascot";
                     },
                   })}
               >
-                <Icon
-                  pack="ri"
-                  name="download-cloud-2-fill"
-                  class="h-6 text-pine-800 group-hover:text-pine-500"
-                />
+                <Icon name="ri:download-cloud-2-fill" class="text-2xl text-pine-800 group-hover:text-pine-500" />
                 {
                   t("downloadCastopodWithVersion", {
                     version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
@@ -105,11 +98,8 @@ import CastopodMascot from "assets:CastopodMascot";
           <hr class="my-6" />
           <div class="flex flex-col">
             <h2 class="text-xl font-semibold text-pine-800 font-display">
-              <Icon
-                pack="ri"
-                name="install-fill"
-                class="h-6 text-pine-300"
-              /><span>2. {t("install")}</span>
+              <Icon name="ri:install-fill" class="text-2xl text-pine-300" />
+              <span>2. {t("install")}</span>
             </h2>
             <p class="max-w-sm text-sm text-gray-500">
               {t("installDescription")}
@@ -124,11 +114,8 @@ import CastopodMascot from "assets:CastopodMascot";
                       props: { method: "Docker", via: "Getting Started" },
                     })}
                 >
-                  <Icon
-                    pack="ri"
-                    name="arrow-right-line"
-                    class="h-6 transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  /> Docker
+                  <Icon name="ri:arrow-right-line" class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1" />
+                  Docker
                 </a>
               </li>
               <li>
@@ -140,11 +127,8 @@ import CastopodMascot from "assets:CastopodMascot";
                       props: { method: "YunoHost", via: "Getting Started" },
                     })}
                 >
-                  <Icon
-                    pack="ri"
-                    name="arrow-right-line"
-                    class="h-6 transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  /> YunoHost
+                  <Icon name="ri:arrow-right-line" class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1" />
+                  YunoHost
                 </a>
               </li>
               <li>
@@ -156,11 +140,8 @@ import CastopodMascot from "assets:CastopodMascot";
                       props: { method: "CloudPanel", via: "Getting Started" },
                     })}
                 >
-                  <Icon
-                    pack="ri"
-                    name="arrow-right-line"
-                    class="h-6 transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  /> CloudPanel
+                  <Icon name="ri:arrow-right-line" class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1" />
+                  CloudPanel
                 </a>
               </li>
               <li>
@@ -175,11 +156,8 @@ import CastopodMascot from "assets:CastopodMascot";
                       },
                     })}
                 >
-                  <Icon
-                    pack="ri"
-                    name="arrow-right-line"
-                    class="h-6 transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  /> Ansible Playbook
+                  <Icon name="ri:arrow-right-line" class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"/>
+                  Ansible Playbook
                 </a>
               </li>
               <li>
@@ -191,11 +169,7 @@ import CastopodMascot from "assets:CastopodMascot";
                       props: { method: "Manual", via: "Getting Started" },
                     })}
                 >
-                  <Icon
-                    pack="ri"
-                    name="arrow-right-line"
-                    class="h-6 transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  />
+                  <Icon name="ri:arrow-right-line" class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"/>
                   {t("manual")}
                 </a>
               </li>
@@ -205,28 +179,28 @@ import CastopodMascot from "assets:CastopodMascot";
 
         <Card
           link="https://docs.castopod.org/"
-          icon="book-read-fill"
+          icon="ri:book-read-fill"
           title={t("documentation")}
           analyticsEvent="Documentation"
           >{t("documentationDescription")}
         </Card>
         <Card
           link="https://code.castopod.org/adaures/castopod/-/issues"
-          icon="bug-fill"
+          icon="ri:bug-fill"
           title={t("issueTracker")}
           analyticsEvent="Issue Tracker"
           >{t("issueTrackerDescription")}
         </Card>
         <Card
           link="https://translate.castopod.org/"
-          icon="translate-2"
+          icon="ri:translate-2"
           title={t("translate")}
           analyticsEvent="Translate"
           >{t("translateDescription")}
         </Card>
         <Card
           link="https://castopod.org/chat"
-          icon="chat-smile-2-fill"
+          icon="ri:chat-smile-2-fill"
           title={t("chat")}
           analyticsEvent="Chat"
         >
