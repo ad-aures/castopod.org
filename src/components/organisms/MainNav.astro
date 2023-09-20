@@ -26,7 +26,7 @@ const toggleMobileMenu = () => {
 };
 ---
 
-<nav class="px-4 text-pine-100 bg-pine-800 md:px-0">
+<nav class="px-4 text-pine-100 md:px-0">
   <div class="container flex justify-between h-20">
     <div class="inline-flex items-center gap-x-6">
       <a href={localizePath("/")} class="relative -bottom-2" title="Home">
@@ -88,23 +88,20 @@ const toggleMobileMenu = () => {
         @click={toggleMobileMenu}
         class="p-2 md:hidden"
         title="Toggle menu"
-        >
+      >
         <Icon id="menu-open" name="ri:menu-2-fill" class="h-6" />
-        <Icon
-          id="menu-close"
-          name="ri:close-fill"
-          class="hidden text-2xl"
-        />
+        <Icon id="menu-close" name="ri:close-fill" class="hidden text-2xl" />
       </Button>
       <nav
         id="mobile-navigation"
         class="fixed top-0 left-0 z-50 flex flex-col hidden w-screen h-screen px-8 py-12 text-xl bg-white gap-y-2 text-pine-900"
       >
-      <Button
+        <Button
           @click={toggleMobileMenu}
           class="absolute top-0 right-0 p-4 hover:bg-pine-100"
           title="Toggle menu"
-          ><Icon id="menu-open" name="ri:close-fill" class="text-2xl" />
+        >
+          <Icon id="menu-open" name="ri:close-fill" class="text-2xl" />
         </Button>
         <a
           href="https://blog.castopod.org/"

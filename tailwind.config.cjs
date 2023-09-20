@@ -42,6 +42,15 @@ module.exports = {
           900: "#8e162e",
         },
       },
+      keyframes: {
+        infinite: {
+          "0%": { "background-position": "0 0" },
+          "100%": { "background-position": "0 -100%" },
+        },
+      },
+      animation: {
+        infinite: "infinite 40s linear infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

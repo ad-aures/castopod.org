@@ -29,263 +29,272 @@ import CastopodMascot from "assets:CastopodMascot";
   </head>
 
   <body class="flex flex-col min-h-full overflow-x-hidden bg-pine-800">
-    <header class="pt-12 pb-6">
-      <div class="container flex flex-col items-start px-4">
-        <a
-          href={localizePath("/")}
-          class="inline-flex gap-x-2"
-          title={t("common:backToHome")}
-        >
-          <Icon name="ri:arrow-left-line" class="text-2xl text-pine-100" />
-          <CastopodLogo className="h-8" />
-        </a>
-        <h1
-          class="relative z-10 inline text-4xl font-bold font-display after:bg-pine-900 after:-z-10 text-pine-100 after:w-full after:h-1/2 after:absolute after:left-0 after:-bottom-1 after:rounded-full"
-        >
-          {t("pageTitle")}
-          <i class="pi pi-legal"></i>
-        </h1>
-      </div>
-    </header>
-    <main class="container flex-1 pt-8 pb-16">
-      <ul class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
-        <li
-          class="relative col-span-1 p-1 transition md:col-span-3 bg-gradient-to-r from-orange-600 to-orange-400 lg:col-span-4 rounded-conditional-xl group hover:from-orange-400 hover:to-orange-600 focus:from-orange-400 focus:to-orange-600"
-        >
-          <div
-            class="absolute z-10 p-2 rounded-full left-4 -top-6 lg:-left-4 lg:-top-4 bg-gradient-to-tr from-orange-600 to-orange-400"
-          >
-            <Icon
-              name="ri:key-2-fill"
-              class="text-2xl text-white transition group-hover:rotate-45"
-            />
-          </div>
+    <div
+      class="relative bg-[length:300px] motion-safe:animate-infinite"
+      style="background-image: url('/assets/images/castopod-pattern.svg')"
+    >
+      <header class="pt-12 pb-6">
+        <div class="container flex flex-col items-start px-4">
           <a
-            href="https://castopod.com/?utm_source=castopod.org&utm_medium=Referral"
-            title="castopod.com"
-            class="relative flex flex-wrap items-center p-4 overflow-hidden transition bg-white rounded-conditional-lg gap-y-6 group-hover:bg-orange-50 focus:bg-orange-50"
-            data-analytics={'"Castopod.com", ' +
-              JSON.stringify({
-                props: {
-                  via: "Getting Started",
-                },
-              })}
+            href={localizePath("/")}
+            class="inline-flex gap-x-2"
+            title={t("common:backToHome")}
           >
-            <div class="flex flex-col gap-y-2">
-              <h2
-                class="inline-flex text-xl font-semibold text-transparent gap-x-2 font-display bg-clip-text bg-gradient-to-r from-orange-600 to-orange-100"
-              >
-                <Icon
-                  name="ri:sparkling-2-line"
-                  class="absolute text-[12rem] transition right-0 group-hover:-translate-x-2 group-hover:translate-y-2 group-focus:-translate-x-2 group-focus:translate-y-2 -top-1/2 text-orange-500 opacity-5"
-                />
-                {t("turnkey.title")}
-              </h2>
-              <p class="text-gray-500">
-                <Trans i18nKey="turnkey.description">
-                  Get your own Castopod instance in just <strong
-                    class="font-semibold">5 minutes</strong
-                  >!<br />No maintenance, no strings attached.
-                </Trans>
-              </p>
-            </div>
-            <div
-              class="inline-flex px-2 py-1 ml-auto font-semibold text-transparent rounded-full gap-x-1 bg-clip-text bg-gradient-to-r from-orange-600 to-orange-700"
-            >
-              {t("turnkey.cta")}
-              <Icon
-                name="ri:arrow-right-line"
-                class="text-2xl text-orange-700 transition opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-focus:opacity-100 group-focus:translate-x-1"
-              />
-            </div>
+            <Icon name="ri:arrow-left-line" class="text-2xl text-pine-100" />
+            <CastopodLogo className="h-8" />
           </a>
-        </li>
-        <li
-          class="col-span-1 row-span-2 p-4 bg-white border-4 border-transparent shadow-2xl md:col-span-2 lg:col-span-2 rounded-conditional-xl"
-        >
-          <div class="flex flex-col">
-            <h2 class="text-xl font-semibold text-pine-800 font-display">
+          <h1
+            class="relative z-10 inline text-4xl font-bold font-display after:bg-pine-900 after:-z-10 text-pine-100 after:w-full after:h-1/2 after:absolute after:left-0 after:-bottom-1 after:rounded-full"
+          >
+            {t("pageTitle")}
+            <i class="pi pi-legal"></i>
+          </h1>
+        </div>
+      </header>
+      <main class="container flex-1 pt-8 pb-16">
+        <ul class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
+          <li
+            class="relative col-span-1 p-1 transition md:col-span-3 bg-gradient-to-r from-orange-600 to-orange-400 lg:col-span-4 rounded-conditional-xl group hover:from-orange-400 hover:to-orange-600 focus:from-orange-400 focus:to-orange-600"
+          >
+            <div
+              class="absolute z-10 p-2 rounded-full left-4 -top-6 lg:-left-4 lg:-top-4 bg-gradient-to-tr from-orange-600 to-orange-400"
+            >
               <Icon
-                name="ri:inbox-archive-fill"
-                class="text-2xl text-pine-300"
+                name="ri:key-2-fill"
+                class="text-2xl text-white transition group-hover:rotate-45"
               />
-              <span>1. {t("download")}</span>
-            </h2>
-            <p class="max-w-sm text-sm text-gray-500">
-              {t("requirements")}
-            </p>
-            <div class="flex flex-row flex-wrap gap-4 mt-4">
-              <a
-                href={import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
-                class="inline-flex items-center px-4 py-2 font-semibold text-white transition border-2 border-transparent rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
-                download
-                data-analytics={'"Download", ' +
-                  JSON.stringify({
-                    props: {
-                      via: "Getting Started",
-                      version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
-                    },
-                  })}
-              >
-                <Icon
-                  name="ri:download-cloud-2-fill"
-                  class="text-2xl text-pine-800 group-hover:text-pine-500"
-                />
-                {
-                  t("downloadCastopodWithVersion", {
-                    version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
-                  })
-                }
-              </a>
-              <div class="flex items-center">
-                <a
-                  class="text-xs underline hover:no-underline"
-                  href="https://code.castopod.org/adaures/castopod/-/releases"
-                  >{t("releases")}
-                </a>
-                <span class="mx-2">·</span>
-                <a
-                  class="text-xs underline hover:no-underline"
-                  href="https://code.castopod.org/adaures/castopod/"
-                  >{t("source")}
-                </a>
-              </div>
             </div>
-          </div>
-          <hr class="my-6" />
-          <div class="flex flex-col">
-            <h2 class="text-xl font-semibold text-pine-800 font-display">
-              <Icon name="ri:install-fill" class="text-2xl text-pine-300" />
-              <span>2. {t("install")}</span>
-            </h2>
-            <p class="max-w-sm text-sm text-gray-500">
-              {t("installDescription")}
-            </p>
-            <ul class="grid mt-4 sm:grid-cols-2">
-              <li>
-                <a
-                  href="https://docs.castopod.org/getting-started/docker.html"
-                  class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
-                  data-analytics={'"Install", ' +
-                    JSON.stringify({
-                      props: { method: "Docker", via: "Getting Started" },
-                    })}
+            <a
+              href="https://castopod.com/?utm_source=castopod.org&utm_medium=Referral"
+              title="castopod.com"
+              class="relative flex flex-wrap items-center p-4 overflow-hidden transition bg-white rounded-conditional-lg gap-y-6 group-hover:bg-orange-50 focus:bg-orange-50"
+              data-analytics={'"Castopod.com", ' +
+                JSON.stringify({
+                  props: {
+                    via: "Getting Started",
+                  },
+                })}
+            >
+              <div class="flex flex-col gap-y-2">
+                <h2
+                  class="inline-flex text-xl font-semibold text-transparent gap-x-2 font-display bg-clip-text bg-gradient-to-r from-orange-600 to-orange-100"
                 >
                   <Icon
-                    name="ri:arrow-right-line"
-                    class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    name="ri:sparkling-2-line"
+                    class="absolute text-[12rem] transition right-0 group-hover:-translate-x-2 group-hover:translate-y-2 group-focus:-translate-x-2 group-focus:translate-y-2 -top-1/2 text-orange-500 opacity-5"
                   />
-                  Docker
-                </a>
-              </li>
-              <li>
+                  {t("turnkey.title")}
+                </h2>
+                <p class="text-gray-500">
+                  <Trans i18nKey="turnkey.description">
+                    Get your own Castopod instance in just <strong
+                      class="font-semibold">5 minutes</strong
+                    >!<br />No maintenance, no strings attached.
+                  </Trans>
+                </p>
+              </div>
+              <div
+                class="inline-flex px-2 py-1 ml-auto font-semibold text-transparent rounded-full gap-x-1 bg-clip-text bg-gradient-to-r from-orange-600 to-orange-700"
+              >
+                {t("turnkey.cta")}
+                <Icon
+                  name="ri:arrow-right-line"
+                  class="text-2xl text-orange-700 transition opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-focus:opacity-100 group-focus:translate-x-1"
+                />
+              </div>
+            </a>
+          </li>
+          <li
+            class="col-span-1 row-span-2 p-4 bg-white border-4 border-transparent shadow-2xl md:col-span-2 lg:col-span-2 rounded-conditional-xl"
+          >
+            <div class="flex flex-col">
+              <h2 class="text-xl font-semibold text-pine-800 font-display">
+                <Icon
+                  name="ri:inbox-archive-fill"
+                  class="text-2xl text-pine-300"
+                />
+                <span>1. {t("download")}</span>
+              </h2>
+              <p class="max-w-sm text-sm text-gray-500">
+                {t("requirements")}
+              </p>
+              <div class="flex flex-row flex-wrap gap-4 mt-4">
                 <a
-                  href="https://install-app.yunohost.org/?app=castopod"
-                  class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
-                  data-analytics={'"Install", ' +
-                    JSON.stringify({
-                      props: { method: "YunoHost", via: "Getting Started" },
-                    })}
-                >
-                  <Icon
-                    name="ri:arrow-right-line"
-                    class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  />
-                  YunoHost
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://blog.castopod.org/install-castopod-on-cloud-panel-v2/"
-                  class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
-                  data-analytics={'"Install", ' +
-                    JSON.stringify({
-                      props: { method: "CloudPanel", via: "Getting Started" },
-                    })}
-                >
-                  <Icon
-                    name="ri:arrow-right-line"
-                    class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  />
-                  CloudPanel
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/belykhk/castopod-ansible-playbook"
-                  class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
-                  data-analytics={'"Install", ' +
+                  href={import.meta.env.PUBLIC_CASTOPOD_PACKAGE_URL}
+                  class="inline-flex items-center px-4 py-2 font-semibold text-white transition border-2 border-transparent rounded-full shadow-md group gap-x-2 bg-pine-500 hover:bg-pine-800 focus:outline-none focus:ring-2 focus:ring-pine-400 focus:ring-opacity-75"
+                  download
+                  data-analytics={'"Download", ' +
                     JSON.stringify({
                       props: {
-                        method: "Ansible Playbook",
                         via: "Getting Started",
+                        version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
                       },
                     })}
                 >
                   <Icon
-                    name="ri:arrow-right-line"
-                    class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    name="ri:download-cloud-2-fill"
+                    class="text-2xl text-pine-800 group-hover:text-pine-500"
                   />
-                  Ansible Playbook
+                  {
+                    t("downloadCastopodWithVersion", {
+                      version: import.meta.env.PUBLIC_CASTOPOD_VERSION,
+                    })
+                  }
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://docs.castopod.org/getting-started/install.html"
-                  class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
-                  data-analytics={'"Install", ' +
-                    JSON.stringify({
-                      props: { method: "Manual", via: "Getting Started" },
-                    })}
-                >
-                  <Icon
-                    name="ri:arrow-right-line"
-                    class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
-                  />
-                  {t("manual")}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+                <div class="flex items-center">
+                  <a
+                    class="text-xs underline hover:no-underline"
+                    href="https://code.castopod.org/adaures/castopod/-/releases"
+                    >{t("releases")}
+                  </a>
+                  <span class="mx-2">·</span>
+                  <a
+                    class="text-xs underline hover:no-underline"
+                    href="https://code.castopod.org/adaures/castopod/"
+                    >{t("source")}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr class="my-6" />
+            <div class="flex flex-col">
+              <h2 class="text-xl font-semibold text-pine-800 font-display">
+                <Icon name="ri:install-fill" class="text-2xl text-pine-300" />
+                <span>2. {t("install")}</span>
+              </h2>
+              <p class="max-w-sm text-sm text-gray-500">
+                {t("installDescription")}
+              </p>
+              <ul class="grid mt-4 sm:grid-cols-2">
+                <li>
+                  <a
+                    href="https://docs.castopod.org/getting-started/docker.html"
+                    class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                    data-analytics={'"Install", ' +
+                      JSON.stringify({
+                        props: { method: "Docker", via: "Getting Started" },
+                      })}
+                  >
+                    <Icon
+                      name="ri:arrow-right-line"
+                      class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    />
+                    Docker
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://install-app.yunohost.org/?app=castopod"
+                    class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                    data-analytics={'"Install", ' +
+                      JSON.stringify({
+                        props: { method: "YunoHost", via: "Getting Started" },
+                      })}
+                  >
+                    <Icon
+                      name="ri:arrow-right-line"
+                      class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    />
+                    YunoHost
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://blog.castopod.org/install-castopod-on-cloud-panel-v2/"
+                    class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                    data-analytics={'"Install", ' +
+                      JSON.stringify({
+                        props: { method: "CloudPanel", via: "Getting Started" },
+                      })}
+                  >
+                    <Icon
+                      name="ri:arrow-right-line"
+                      class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    />
+                    CloudPanel
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/belykhk/castopod-ansible-playbook"
+                    class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                    data-analytics={'"Install", ' +
+                      JSON.stringify({
+                        props: {
+                          method: "Ansible Playbook",
+                          via: "Getting Started",
+                        },
+                      })}
+                  >
+                    <Icon
+                      name="ri:arrow-right-line"
+                      class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    />
+                    Ansible Playbook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.castopod.org/getting-started/install.html"
+                    class="inline-flex w-full gap-4 py-2 font-semibold group hover:underline decoration-2 decoration-pine-500 text-pine-900"
+                    data-analytics={'"Install", ' +
+                      JSON.stringify({
+                        props: { method: "Manual", via: "Getting Started" },
+                      })}
+                  >
+                    <Icon
+                      name="ri:arrow-right-line"
+                      class="text-2xl transition text-pine-200 group-hover:text-pine-500 group-focus:text-pine-500 group-hover:translate-x-1 group-focus:translate-x-1"
+                    />
+                    {t("manual")}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-        <Card
-          link="https://docs.castopod.org/"
-          icon="ri:book-read-fill"
-          title={t("documentation")}
-          analyticsEvent="Documentation"
-        >
-          {t("documentationDescription")}
-        </Card>
-        <Card
-          link="https://code.castopod.org/adaures/castopod/-/issues"
-          icon="ri:bug-fill"
-          title={t("issueTracker")}
-          analyticsEvent="Issue Tracker"
-        >
-          {t("issueTrackerDescription")}
-        </Card>
-        <Card
-          link="https://translate.castopod.org/"
-          icon="ri:translate-2"
-          title={t("translate")}
-          analyticsEvent="Translate"
-        >
-          {t("translateDescription")}
-        </Card>
-        <Card
-          link="https://castopod.org/chat"
-          icon="ri:chat-smile-2-fill"
-          title={t("chat")}
-          analyticsEvent="Chat"
-        >
-          {t("chatDescription")}
-        </Card>
-        <li class="items-end justify-center hidden md:flex lg:hidden">
-          <CastopodMascot className="h-48" />
-        </li>
-      </ul>
-    </main>
+          <Card
+            link="https://docs.castopod.org/"
+            icon="ri:book-read-fill"
+            title={t("documentation")}
+            analyticsEvent="Documentation"
+          >
+            {t("documentationDescription")}
+          </Card>
+          <Card
+            link="https://code.castopod.org/adaures/castopod/-/issues"
+            icon="ri:bug-fill"
+            title={t("issueTracker")}
+            analyticsEvent="Issue Tracker"
+          >
+            {t("issueTrackerDescription")}
+          </Card>
+          <Card
+            link="https://translate.castopod.org/"
+            icon="ri:translate-2"
+            title={t("translate")}
+            analyticsEvent="Translate"
+          >
+            {t("translateDescription")}
+          </Card>
+          <Card
+            link="https://castopod.org/chat"
+            icon="ri:chat-smile-2-fill"
+            title={t("chat")}
+            analyticsEvent="Chat"
+          >
+            {t("chatDescription")}
+          </Card>
+          <li class="items-end justify-center hidden md:flex lg:hidden">
+            <CastopodMascot className="h-48" />
+          </li>
+        </ul>
+      </main>
+      <div
+        class="absolute bottom-0 left-0 w-full -z-10 h-1/6 bg-gradient-to-t from-pine-900 to-transparent"
+      >
+      </div>
+    </div>
     <Footer />
     <AnalyticsEventsScript />
   </body>

@@ -7,7 +7,11 @@ import { t } from "i18next";
 import { localizePath } from "astro-i18next";
 ---
 
-<header id="jumbotron" class="text-pine-100 bg-pine-800">
+<header
+  id="jumbotron"
+  class="relative text-pine-100 bg-pine-800 bg-[length:300px] motion-safe:animate-infinite"
+  style="background-image: url('/assets/images/castopod-pattern.svg')"
+>
   <MainNav />
   <hr class="container border-pine-500" />
   <div
@@ -53,5 +57,9 @@ import { localizePath } from "astro-i18next";
       </div>
     </div>
     <CastopodMascot className="h-80 hidden md:block" />
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-pine-900 to-transparent"
+  >
   </div>
 </header>
