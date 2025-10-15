@@ -40,9 +40,7 @@ const toggleMobileMenu = () => {
           >{t("common:blog")}
         </a>
         <a
-          href={i18next.language === "en"
-            ? "https://docs.castopod.org/"
-            : `https://docs.castopod.org/${i18next.language}`}
+          href={`https://docs.castopod.org/main/${i18next.language}`}
           class="hidden px-4 py-2 font-semibold md:block hover:underline decoration-pine-500 decoration-2"
           data-analytics={'"Documentation", ' +
             JSON.stringify({ props: { via: "Main Nav" } })}
