@@ -16,15 +16,15 @@
     "i18n:generate": "astro-i18next generate"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@iconify-json/ri": "^1.1.12",
-    "@tailwindcss/typography": "^0.5.10",
+    "@astrojs/sitemap": "3.0.5",
+    "@astrojs/tailwind": "^5.1.5",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@iconify-json/ri": "^1.2.10",
+    "@tailwindcss/typography": "^0.5.19",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
-    "astro": "^3.1.1",
+    "astro": "^3.6.5",
     "astro-xelement": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.49.0",
@@ -35,15 +35,15 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "lint-staged": "^14.0.1",
-    "prettier": "2.8.8",
-    "prettier-plugin-astro": "^0.8.1",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-prettier": "^3.0.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^17.4.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
   },
   "config": {
     "commitizen": {
@@ -52,9 +52,10 @@
   },
   "dependencies": {
     "astro-i18next": "1.0.0-beta.21",
-    "astro-icon": "^1.0.0-next.2",
-    "astro-seo": "^0.7.6",
-    "i18next": "^22.5.1"
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
+    "i18next": "^22.5.1",
+    "sharp": "^0.34.5"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",

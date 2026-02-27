@@ -6,6 +6,9 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    host: true,
+  },
   site: "https://castopod.org/",
   integrations: [
     icon({
