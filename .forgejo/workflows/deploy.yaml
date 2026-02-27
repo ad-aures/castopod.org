@@ -1,0 +1,58 @@
+name: 🚀 castopod.org deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: node-lts
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v6
+
+      - name: 📥 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          cache: true
+
+      - name: 📥 Install dependencies
+        run: pnpm install
+
+      - name: 🌱 Generate .env
+        run: |
+          chmod +x ./scripts/generate_env.sh
+          ./scripts/generate_env.sh
+
+      - name: 📦 Build website
+        run: pnpm run build
+
+      - name: 📤 Upload build artifact
+        uses: https://data.forgejo.org/forgejo/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  deploy:
+    runs-on: node-lts
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v6
+
+      - name: 📥 Download build artifact
+        uses: https://data.forgejo.org/forgejo/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: 🚀 Deploy Build with rsync
+        uses: https://github.com/burnett01/rsync-deployments@v8
+        with:
+          switches: -avzr --delete
+          path: dist/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_port: ${{ secrets.DEPLOY_PORT }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
